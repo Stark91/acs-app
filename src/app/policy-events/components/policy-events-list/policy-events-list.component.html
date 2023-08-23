@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-form-field color="primary">
+        <mat-label>Select a policy</mat-label>
+        <mat-select disableRipple [formControl]="policyCtrl">
+            <mat-option *ngFor="let option of policyCtrlOptions" [value]="option.value">{{ option.label }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>
+<mat-card>
+    <mat-spinner *ngIf="loading$ | async"></mat-spinner>
+    <mat-nav-list *ngIf="events$ | async as events">
+        <a *ngFor="let event of events" mat-list-item [routerLink]="event.id.toString()">
+            <p matLine>{{ event.description }}</p>
+        </a>
+    </mat-nav-list>
+</mat-card>

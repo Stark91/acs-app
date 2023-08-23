@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-form-field color="primary">
+        <mat-label>Select a law type</mat-label>
+        <mat-select disableRipple [formControl]="lawTypeCtrl">
+            <mat-option *ngFor="let option of lawTypeCtrlOptions" [value]="option.value">{{ option.label }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>
+<mat-card>
+    <mat-spinner *ngIf="loading$ | async"></mat-spinner>
+    <mat-nav-list>
+        <acs-laws-list-section *ngIf="earthLaws$ | async as laws" [laws]="laws" lawType="Earth"></acs-laws-list-section>
+        <acs-laws-list-section *ngIf="fireLaws$ | async as laws" [laws]="laws" lawType="Fire"></acs-laws-list-section>
+        <acs-laws-list-section *ngIf="metalLaws$ | async as laws" [laws]="laws" lawType="Metal"></acs-laws-list-section>
+        <acs-laws-list-section *ngIf="noneLaws$ | async as laws" [laws]="laws" lawType="None"></acs-laws-list-section>
+        <acs-laws-list-section *ngIf="waterLaws$ | async as laws" [laws]="laws" lawType="Water"></acs-laws-list-section>
+        <acs-laws-list-section *ngIf="woodLaws$ | async as laws" [laws]="laws" lawType="Wood"></acs-laws-list-section>
+    </mat-nav-list>
+</mat-card>

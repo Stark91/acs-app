@@ -1,0 +1,36 @@
+<mat-card-subtitle>Cultivator stats</mat-card-subtitle>
+<div class="form">
+    <mat-form-field>
+        <mat-label>Charisma</mat-label>
+        <input matInput type="number" min="0" max="10" [formControl]="charismaCtrl">
+        <mat-error *ngIf="charismaCtrl.hasError('min')">Value must be greater than 0</mat-error>
+        <mat-error *ngIf="charismaCtrl.hasError('max')">Value must be lower than 10</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Constitution</mat-label>
+        <input matInput type="number" min="0" max="10" [formControl]="constitutionCtrl">
+        <mat-error *ngIf="constitutionCtrl.hasError('min')">Value must be greater than 0</mat-error>
+        <mat-error *ngIf="constitutionCtrl.hasError('max')">Value must be lower than 10</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Intelligence</mat-label>
+        <input matInput type="number" min="0" max="10" [formControl]="intelligenceCtrl">
+        <mat-error *ngIf="intelligenceCtrl.hasError('min')">Value must be greater than 0</mat-error>
+        <mat-error *ngIf="intelligenceCtrl.hasError('max')">Value must be lower than 10</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Luck</mat-label>
+        <input matInput type="number" min="0" max="10" [formControl]="luckCtrl">
+        <mat-error *ngIf="luckCtrl.hasError('min')">Value must be greater than 0</mat-error>
+        <mat-error *ngIf="luckCtrl.hasError('max')">Value must be lower than 10</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Perception</mat-label>
+        <input matInput type="number" min="0" max="10" [formControl]="perceptionCtrl">
+        <mat-error *ngIf="perceptionCtrl.hasError('min')">Value must be greater than 0</mat-error>
+        <mat-error *ngIf="perceptionCtrl.hasError('max')">Value must be lower than 10</mat-error>
+    </mat-form-field>
+</div>
+<div class="result">
+    <button mat-flat-button color="warn">Law match {{getLawMatch() | percent}}</button>
+</div>

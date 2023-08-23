@@ -1,0 +1,21 @@
+<mat-card>
+    <ng-container *ngIf="law$ | async as law">
+        <mat-card-header>
+            <mat-card-title>{{law.name}}</mat-card-title>
+            <mat-card-subtitle>{{law.type}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{law.description}}</p>
+            <ng-container *ngIf="isXiandao$ | async">
+                <acs-xiandao-stats-table [law]="law"></acs-xiandao-stats-table>
+                <acs-xiandao-law-match-form [law]="law"></acs-xiandao-law-match-form>
+            </ng-container>
+        </mat-card-content>
+    </ng-container>
+    <mat-card-actions>
+        <mat-spinner *ngIf="loadingLaw$ | async; else buttons"></mat-spinner>
+        <ng-template #buttons>
+            <button mat-flat-button color="primary" (click)="onGoBack()">Back</button>
+        </ng-template>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,2594 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "policy": "sharedEvents",
+            "description": "[NAME] came across the forces of [SCHOOL], and saw that they were giving alms to passersby."
+        },
+        {
+            "id": 2,
+            "policy": "sharedEvents",
+            "description": "[NAME] came across the forces of [SCHOOL], and saw that they were preaching."
+        },
+        {
+            "id": 3,
+            "policy": "sharedEvents",
+            "description": "[NAME] came across the forces of [SCHOOL], and saw that they were holding a fasting ceremony."
+        },
+        {
+            "id": 4,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and distributed food to the passersby."
+        },
+        {
+            "id": 5,
+            "policy": "charity",
+            "description": "[NAME] led disciples to the street and started giving alms to passersby. There were many a beggar asking for money on the side of the road."
+        },
+        {
+            "id": 6,
+            "policy": "charity",
+            "description": "[NAME] led disciples to the street and started giving alms to passersby. They saw a stone bridge had collapsed, and people no longer walk through here."
+        },
+        {
+            "id": 7,
+            "policy": "charity",
+            "description": "[NAME] led disciples to the street and started giving alms to passersby. They saw two villagers arguing over a dog."
+        },
+        {
+            "id": 8,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They saw two young gentlemen were fighting over a woman."
+        },
+        {
+            "id": 9,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They saw two big men fighting each other. A passerby explained that it was because one man planted a tree, but its fruits ended up falling into the other guy's home and he was not willing to give them."
+        },
+        {
+            "id": 10,
+            "policy": "charity",
+            "description": "[NAME] was preparing to do charity work, when a woman exquisitely dressed approached [NAME]'s place crying, and said her child had gone missing."
+        },
+        {
+            "id": 11,
+            "policy": "charity",
+            "description": "[NAME] was preparing to do charity work, when a man rushed into the hall begging [NAME] to save his dying wife."
+        },
+        {
+            "id": 12,
+            "policy": "charity",
+            "description": "[NAME] had wandered to a rather distant place. A group of bandits happened to be passing by."
+        },
+        {
+            "id": 13,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They came across a broken wooden house, its owner is handicapped and unable to repair it."
+        },
+        {
+            "id": 14,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They saw a man wearing foreign costume swindling passersby."
+        },
+        {
+            "id": 15,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They passed by two taverns facing each other on opposite sides of the road, of which the waiters were arguing over business issues."
+        },
+        {
+            "id": 16,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They encountered a group of refugees."
+        },
+        {
+            "id": 17,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They saw a dying man who was severely ill on the side of the road, who pleaded to [NAME] to put him out of his misery."
+        },
+        {
+            "id": 18,
+            "policy": "charity",
+            "description": "[NAME] led the disciples to the street and started giving alms to passersby. They accidentally touched an old man in the crowd, who immediately fell onto the ground and started shouting, \"Ouch! Somebody broke my leg! This is the one! \"."
+        },
+        {
+            "id": 19,
+            "policy": "plotting",
+            "description": "[NAME] walked into the secret pavilion to hatch a plot."
+        },
+        {
+            "id": 20,
+            "policy": "plotting",
+            "description": "[NAME] discovered that {0} was giving alms and decided to interfere."
+        },
+        {
+            "id": 21,
+            "policy": "plotting",
+            "description": "[NAME] discovered that {0} was preparing to preach...an idea came to mind like a bolt of lightning."
+        },
+        {
+            "id": 22,
+            "policy": "plotting",
+            "description": "[NAME] found out that {0} was holding a fasting ceremony. The agent decided to interfere with it."
+        },
+        {
+            "id": 23,
+            "policy": "preaching",
+            "description": "[NAME] was standing on the side of the road near their place and preparing to preach."
+        },
+        {
+            "id": 24,
+            "policy": "preaching",
+            "description": "[NAME] was preaching when someone came up to them and shouted: \"A load of nonsense! \""
+        },
+        {
+            "id": 25,
+            "policy": "preaching",
+            "description": "[NAME] was preaching when a scholar came up to them and said whatever the agent said was wrong."
+        },
+        {
+            "id": 26,
+            "policy": "preaching",
+            "description": "[NAME] was preaching. A middle-aged woman kept clapping in an obnoxious way, but she is not a follower."
+        },
+        {
+            "id": 27,
+            "policy": "abstinence",
+            "description": "[NAME] saw that people were all living a lavish lifestyle and decided to perform an Abstinence."
+        },
+        {
+            "id": 28,
+            "policy": "abstinence",
+            "description": "[NAME] saw that rich people were living lavishly while the poor die on the side of the road, and decided to perform an Abstinence."
+        },
+        {
+            "id": 29,
+            "policy": "abstinence",
+            "description": "[NAME] saw that outlaws were running the town and hatred filled the city, and decided to perform an Abstinence."
+        },
+        {
+            "id": 30,
+            "policy": "abstinence",
+            "description": "[NAME] saw that dishonest merchants and robbers were running the town, and decided to perform an Abstinence."
+        }
+    ],
+    "outcomes": [
+        {
+            "id": 1,
+            "event": 1,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction"
+        },
+        {
+            "id": 2,
+            "event": 1,
+            "action": "social",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction"
+        },
+        {
+            "id": 3,
+            "event": 1,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction, decrease your attraction"
+        },
+        {
+            "id": 4,
+            "event": 1,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "No outcome"
+        },
+        {
+            "id": 5,
+            "event": 1,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease stability and other population, greatly decrease other attraction"
+        },
+        {
+            "id": 6,
+            "event": 1,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction"
+        },
+        {
+            "id": 7,
+            "event": 1,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 8,
+            "event": 1,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction, decrease stability and your attraction"
+        },
+        {
+            "id": 9,
+            "event": 1,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction, decrease stability and your attraction"
+        },
+        {
+            "id": 10,
+            "event": 1,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Greatly increase other population and other attraction"
+        },
+        {
+            "id": 11,
+            "event": 2,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 12,
+            "event": 2,
+            "action": "social",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 13,
+            "event": 2,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Decrease stability, greatly decrease other attraction"
+        },
+        {
+            "id": 14,
+            "event": 2,
+            "action": "battle",
+            "condition": "< 15",
+            "outcome": "Decrease stability, increase other attraction"
+        },
+        {
+            "id": 15,
+            "event": 2,
+            "action": "charisma",
+            "condition": "<= 7",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 16,
+            "event": 2,
+            "action": "charisma",
+            "condition": "> 7",
+            "outcome": "Steal some population to other"
+        },
+        {
+            "id": 17,
+            "event": 2,
+            "action": "intelligence",
+            "condition": "<= 7",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 18,
+            "event": 2,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease other population and other attraction"
+        },
+        {
+            "id": 19,
+            "event": 2,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 20,
+            "event": 2,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 21,
+            "event": 2,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Greatly increase other attraction, decrease stability and your attraction"
+        },
+        {
+            "id": 22,
+            "event": 2,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Greatly increase other attraction, decrease stability and your attraction"
+        },
+        {
+            "id": 23,
+            "event": 2,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 24,
+            "event": 3,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Greatly increase stability, increase other population"
+        },
+        {
+            "id": 25,
+            "event": 3,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 26,
+            "event": 3,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 27,
+            "event": 3,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Greatly increase stability, decrease your attraction, increase other population"
+        },
+        {
+            "id": 28,
+            "event": 3,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Greatly increase stability, increase other attraction"
+        },
+        {
+            "id": 29,
+            "event": 3,
+            "action": "intelligence",
+            "condition": "<= 7",
+            "outcome": "Greatly increase stability, increase other attraction"
+        },
+        {
+            "id": 30,
+            "event": 3,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease other population and other attraction"
+        },
+        {
+            "id": 31,
+            "event": 3,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly decrease other population, decrease other attraction"
+        },
+        {
+            "id": 32,
+            "event": 3,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 33,
+            "event": 3,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Increase stability, decrease your attraction, increase other atraction"
+        },
+        {
+            "id": 34,
+            "event": 3,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Increase stability, decrease your attraction, increase other atraction"
+        },
+        {
+            "id": 35,
+            "event": 4,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population"
+        },
+        {
+            "id": 36,
+            "event": 4,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 37,
+            "event": 4,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Decrease your population, greatly increase your attraction"
+        },
+        {
+            "id": 38,
+            "event": 5,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 39,
+            "event": 5,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 40,
+            "event": 5,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Increase your population"
+        },
+        {
+            "id": 41,
+            "event": 5,
+            "action": "food",
+            "condition": "",
+            "outcome": "Increase your population"
+        },
+        {
+            "id": 42,
+            "event": 6,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 43,
+            "event": 6,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase your attraction"
+        },
+        {
+            "id": 44,
+            "event": 7,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 45,
+            "event": 7,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Increase your population, increase stability"
+        },
+        {
+            "id": 46,
+            "event": 7,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease your population, decrease stability"
+        },
+        {
+            "id": 47,
+            "event": 8,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 48,
+            "event": 8,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Increase your population, increase stability"
+        },
+        {
+            "id": 49,
+            "event": 8,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease your population, decrease stability"
+        },
+        {
+            "id": 50,
+            "event": 9,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 51,
+            "event": 9,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Increase your population, increase stability"
+        },
+        {
+            "id": 52,
+            "event": 9,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease your population, decrease stability"
+        },
+        {
+            "id": 53,
+            "event": 10,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 54,
+            "event": 11,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 55,
+            "event": 12,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 56,
+            "event": 12,
+            "action": "social",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 57,
+            "event": 12,
+            "action": "battle",
+            "condition": "< 15",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 58,
+            "event": 12,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Increase your population and stability"
+        },
+        {
+            "id": 59,
+            "event": 12,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 60,
+            "event": 12,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Greatly decrease stability"
+        },
+        {
+            "id": 61,
+            "event": 12,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 62,
+            "event": 12,
+            "action": "wood",
+            "condition": "Battle < 15",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 63,
+            "event": 12,
+            "action": "wood",
+            "condition": "Battle >= 15",
+            "outcome": "Increase your population and stability"
+        },
+        {
+            "id": 64,
+            "event": 12,
+            "action": "stone",
+            "condition": "Battle < 15",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 65,
+            "event": 12,
+            "action": "stone",
+            "condition": "Battle >= 15",
+            "outcome": "Increase your population and stability"
+        },
+        {
+            "id": 66,
+            "event": 13,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 67,
+            "event": 13,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase your attraction"
+        },
+        {
+            "id": 68,
+            "event": 14,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 69,
+            "event": 14,
+            "action": "social",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 70,
+            "event": 14,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 71,
+            "event": 14,
+            "action": "food",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 72,
+            "event": 14,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 73,
+            "event": 14,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 74,
+            "event": 14,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 75,
+            "event": 14,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Increase stability and your attraction"
+        },
+        {
+            "id": 76,
+            "event": 14,
+            "action": "battle",
+            "condition": "< 15",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 77,
+            "event": 14,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease your population and stability"
+        },
+        {
+            "id": 78,
+            "event": 15,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 79,
+            "event": 15,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 80,
+            "event": 15,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease your population and stability"
+        },
+        {
+            "id": 81,
+            "event": 16,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Increase city/village population"
+        },
+        {
+            "id": 82,
+            "event": 16,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Increase city/village population"
+        },
+        {
+            "id": 83,
+            "event": 16,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Increase city/village population"
+        },
+        {
+            "id": 84,
+            "event": 16,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Increase city/village population"
+        },
+        {
+            "id": 85,
+            "event": 16,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Increase city/village population"
+        },
+        {
+            "id": 86,
+            "event": 16,
+            "action": "social",
+            "condition": "",
+            "outcome": "Greatly increase city/village population"
+        },
+        {
+            "id": 87,
+            "event": 16,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Increase your population and city/village population"
+        },
+        {
+            "id": 88,
+            "event": 16,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Decrease stability, increase city/village population"
+        },
+        {
+            "id": 89,
+            "event": 16,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly increase your population and city/village population"
+        },
+        {
+            "id": 90,
+            "event": 17,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 91,
+            "event": 17,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 92,
+            "event": 18,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 93,
+            "event": 18,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 94,
+            "event": 18,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 95,
+            "event": 18,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 96,
+            "event": 18,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase your population, greatly increase influence"
+        },
+        {
+            "id": 97,
+            "event": 18,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 98,
+            "event": 19,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 99,
+            "event": 19,
+            "action": "charisma",
+            "condition": "More than 1 sect in town",
+            "outcome": "A lot of your population stolen"
+        },
+        {
+            "id": 100,
+            "event": 19,
+            "action": "intelligence",
+            "condition": "More than 1 sect in town",
+            "outcome": "Greatly decrease other attraction"
+        },
+        {
+            "id": 101,
+            "event": 20,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 102,
+            "event": 20,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 103,
+            "event": 20,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 104,
+            "event": 20,
+            "action": "food",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 105,
+            "event": 20,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 106,
+            "event": 20,
+            "action": "intelligence",
+            "condition": "<= 7",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 107,
+            "event": 20,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease stability and other population, greatly decrease other attraction"
+        },
+        {
+            "id": 108,
+            "event": 20,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease your attraction, increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 109,
+            "event": 20,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 110,
+            "event": 20,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction, increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 111,
+            "event": 20,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction, increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 112,
+            "event": 21,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 113,
+            "event": 21,
+            "action": "social",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 114,
+            "event": 21,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 115,
+            "event": 21,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 116,
+            "event": 21,
+            "action": "charisma",
+            "condition": "<= 7",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 117,
+            "event": 21,
+            "action": "charisma",
+            "condition": "> 7",
+            "outcome": "Steal some population to other"
+        },
+        {
+            "id": 118,
+            "event": 21,
+            "action": "intelligence",
+            "condition": "<= 7",
+            "outcome": "Greatly increase other population"
+        },
+        {
+            "id": 119,
+            "event": 21,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease other population and other attraction"
+        },
+        {
+            "id": 120,
+            "event": 21,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Decrease stability, greatly decrease other attraction"
+        },
+        {
+            "id": 121,
+            "event": 21,
+            "action": "battle",
+            "condition": "< 15",
+            "outcome": "Decrease stability, increase other attraction"
+        },
+        {
+            "id": 122,
+            "event": 21,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 123,
+            "event": 21,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction, greatly increase other population"
+        },
+        {
+            "id": 124,
+            "event": 21,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction, greatly increase other population"
+        },
+        {
+            "id": 125,
+            "event": 22,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Greatly increase stability, increase other population"
+        },
+        {
+            "id": 126,
+            "event": 22,
+            "action": "social",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 127,
+            "event": 22,
+            "action": "disciple",
+            "condition": "",
+            "outcome": "Increase other population, greatly increase other attraction"
+        },
+        {
+            "id": 128,
+            "event": 22,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Greatly increase stability, decrease your attraction, increase other population"
+        },
+        {
+            "id": 129,
+            "event": 22,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Greatly increase stability, increase other attraction"
+        },
+        {
+            "id": 130,
+            "event": 22,
+            "action": "intelligence",
+            "condition": "<= 7",
+            "outcome": "Greatly increase stability, increase other attraction"
+        },
+        {
+            "id": 131,
+            "event": 22,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Decrease other population and other attraction"
+        },
+        {
+            "id": 132,
+            "event": 22,
+            "action": "food",
+            "condition": "",
+            "outcome": "Greatly decrease other population and other attraction"
+        },
+        {
+            "id": 133,
+            "event": 22,
+            "action": "spiritStone",
+            "condition": "",
+            "outcome": "Decrease other population"
+        },
+        {
+            "id": 134,
+            "event": 22,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Increase stability and other attraction, decrease your attraction"
+        },
+        {
+            "id": 135,
+            "event": 22,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Increase stability and other attraction, decrease your attraction"
+        },
+        {
+            "id": 136,
+            "event": 23,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease stability"
+        },
+        {
+            "id": 137,
+            "event": 23,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Greatly increase your population"
+        },
+        {
+            "id": 138,
+            "event": 23,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 139,
+            "event": 24,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 140,
+            "event": 24,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 141,
+            "event": 24,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease your population"
+        },
+        {
+            "id": 142,
+            "event": 24,
+            "action": "charisma",
+            "condition": "",
+            "outcome": "Greatly increase your population"
+        },
+        {
+            "id": 143,
+            "event": 24,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 144,
+            "event": 24,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 145,
+            "event": 25,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 146,
+            "event": 25,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 147,
+            "event": 25,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Greatly increase your population"
+        },
+        {
+            "id": 148,
+            "event": 25,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 149,
+            "event": 26,
+            "action": "noAction",
+            "condition": "",
+            "outcome": "Decrease your attraction"
+        },
+        {
+            "id": 150,
+            "event": 26,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Decrease your population"
+        },
+        {
+            "id": 151,
+            "event": 26,
+            "action": "intelligence",
+            "condition": "",
+            "outcome": "Greatly increase your population"
+        },
+        {
+            "id": 152,
+            "event": 26,
+            "action": "wood",
+            "condition": "",
+            "outcome": "Decrease stability and your attraction"
+        },
+        {
+            "id": 153,
+            "event": 26,
+            "action": "stone",
+            "condition": "",
+            "outcome": "Decrease stability, greatly decrease your attraction"
+        },
+        {
+            "id": 154,
+            "event": 27,
+            "action": "charisma",
+            "condition": "> 7",
+            "outcome": "Greatly increase stability, increase your attraction"
+        },
+        {
+            "id": 155,
+            "event": 28,
+            "action": "food",
+            "condition": "Intelligence > 7",
+            "outcome": "Greatly increase stability, increase your attraction"
+        },
+        {
+            "id": 156,
+            "event": 29,
+            "action": "battle",
+            "condition": ">= 15",
+            "outcome": "Greatly increase stability, increase your attraction"
+        },
+        {
+            "id": 157,
+            "event": 30,
+            "action": "battle",
+            "condition": "",
+            "outcome": "Greatly increase stability"
+        },
+        {
+            "id": 158,
+            "event": 30,
+            "action": "intelligence",
+            "condition": "> 7",
+            "outcome": "Greatly increase stability, increase your attraction"
+        }
+    ],
+    "laws": [
+        {
+            "id": 1,
+            "name": "Grand Chariot Wisdom Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "yinYang": "yin",
+            "description": "One of the true elemental Laws of the Taiyi Sect, including 4 states and 16 different limits that require a step-by-step progress. It is not easy to reach a higher state in this Law, but it does not require much to begin with. You will make steadfast progress in cultivation, and immortality may eventually happen.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 4,
+                "intelligence": 5,
+                "luck": 0,
+                "perception": 7
+            }
+        },
+        {
+            "id": 2,
+            "name": "Six Paths Reincarnation Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "yinYang": "yang",
+            "description": "One of the true elemental Laws of the Taiyi Sect. The cultivator will be the most powerful at the beginning of each state, but as the cultivation progresses, their power will regress step by step until the cultivator becomes as weak as any other mortal. One can only be reborn and advance in cultivation after breakthroughing. Therefore, this Law is popular among cultivators, but few have succeeded in it.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 6,
+                "intelligence": 6,
+                "luck": 3,
+                "perception": 4
+            }
+        },
+        {
+            "id": 3,
+            "name": "Sixteen Supreme Steps Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "yinYang": "yin",
+            "description": "One of the true elemental Laws of the Taiyi Sect, including 4 states and 16 different limits that require a step-by-step progress. It is not easy to reach a higher state in this Law, but it does not require much to begin with. You will make steadfast progress in cultivation, and immortality may eventually happen.",
+            "stats": {
+                "charisma": 5,
+                "constitution": 7,
+                "intelligence": 6,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sunflower Refining Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "yinYang": "balanced",
+            "description": "One of the true elemental Laws of the Taiyi Sect. Only women are allowed to cultivate following this Law. Use the purest power of Yin from earth to create pure Yin spirit, leave the mortal body behind and ascend as an immortal. If practiced by a male cultivator, his sex would be reversed.",
+            "stats": {
+                "charisma": 6,
+                "constitution": 0,
+                "intelligence": 6,
+                "luck": 0,
+                "perception": 6
+            }
+        },
+        {
+            "id": 5,
+            "name": "True Sun Refining Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "yinYang": "yang",
+            "description": "One of the true elemental Laws of the Taiyi Sect. With the help of the Lesser Yang, Fair Yang and Greater Yang, forge a fire from the three forces of Heaven, Earth and Man. The fire will be extremely powerful and light up everything in its Law. However, the cultivation process can be very dangerous. The true fire might even obliterate one's whole existence if the cultivation goes wrong.",
+            "stats": {
+                "charisma": 5,
+                "constitution": 5,
+                "intelligence": 5,
+                "luck": 5,
+                "perception": 5
+            }
+        },
+        {
+            "id": 6,
+            "name": "Emotion Severing Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "yinYang": "yang",
+            "description": "The secret Law of the Skydome Palace. One has to be stunningly attractive to begin cultivating in this Law. The cultivator has to go through adventures in the mortal realm, learn all the human feelings before abandoning them, realizing the true self amidst all the misery and ascending towards immortality. One will often have complicated relationships with other people and experience intricated love and hate due to the special method of cultivation.",
+            "stats": {
+                "charisma": 9,
+                "constitution": 0,
+                "intelligence": 5,
+                "luck": 0,
+                "perception": 5
+            }
+        },
+        {
+            "id": 7,
+            "name": "Heaven Stealing Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "yinYang": "balanced",
+            "description": "Thousands of years ago, earth was forced to separate from heaven, causing a depletion of Qi in the human realm, and ascension became impossible. Out of desperation, a cultivator with a rare gift discovered an unusual way and created this Law. It does not rely on the environment, but will cost one's life energy to breakthrough. Therefore, only a person with the healthiest body and various rare medicines to prolong their lifespan can cultivate in this Law.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 9,
+                "intelligence": 0,
+                "luck": 3,
+                "perception": 0
+            }
+        },
+        {
+            "id": 8,
+            "name": "Jade Purity Immortal Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "The orthodoxy left behind by the Lord of Primordial Beginning. The secret Law of the Kunlun Palace. It is said to be the ultimate source of all Taoist Laws. It leads its follower through 6 states and 12 gates. One will possess extremely abundant and powerful magic force after following this Law. It takes incredible Intelligence and the best of luck to successfully cultivate following this Law.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 7,
+                "luck": 6,
+                "perception": 4
+            }
+        },
+        {
+            "id": 9,
+            "name": "Law of Nimbus Conquest",
+            "type": "Xiandao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A surpreme law created by the Perfected Warrior. After learning this law, one can form yin and yang inside, create yin and yang golden cores then also achieve yin and yang primordial spirits. When training sub-spirits, one can gain twice the effect of half effort. It is the most famouse law of the Perfected Warroir in Wudang Mountain. It is very mysterious.",
+            "stats": {
+                "charisma": 6,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 6,
+                "perception": 6
+            }
+        },
+        {
+            "id": 10,
+            "name": "Myriad Artifact Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "yinYang": "yang",
+            "description": "Passed down by the Avarice Lord in the Supreme Clarity. The ultimate secret Law for artifact crafting of Mt. Sunshade. Only the most ingenious people can practice this Law. A master of this Law can craft anything into an artifact. This Law leads its follower through 5 heavens and 15 palaces. Once completed, one can leave the earth and ascend toward immortality.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 5,
+                "luck": 3,
+                "perception": 8
+            }
+        },
+        {
+            "id": 11,
+            "name": "Primordial Alchemy Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "yinYang": "yang",
+            "description": "The true Law of Taoist alchemy passed down from the Grand Pure One. One will not excel in miracles or battles, but uses elixirs to facilitate the cultivation progress toward excellency. It leads its followers through nine states. Reaching the final state can lead to the ultimate ascension toward immortality.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 5,
+                "intelligence": 6,
+                "luck": 0,
+                "perception": 6
+            }
+        },
+        {
+            "id": 12,
+            "name": "Primordial Symbols Law",
+            "type": "Xiandao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A school of teachings thought to come from the Golden Immortal Yunzhong Zi. It found a new way outside of the traditional system of Golden Core Cultivation. Seizing the moment of breakthrough, one would be able to congeal five Natal Talismans, which have fascinating uses.",
+            "stats": {
+                "charisma": 4,
+                "constitution": 0,
+                "intelligence": 8,
+                "luck": 0,
+                "perception": 8
+            }
+        },
+        {
+            "id": 13,
+            "name": "Seven-Slaughtering Sword",
+            "type": "Xiandao",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "yinYang": "yin",
+            "description": "\nLegend has it that this is a secret Law from the demon realm for the realization of sword mastery. It leads its follower through seven states. Both the beginning and advancement in cultivation are relatively difficult. One will become very powerful in battles and have a strong intention to kill, which leads to the extremely dangerous triple thunders of tribulation. It is an absolute killer's Law.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 7,
+                "intelligence": 0,
+                "luck": 4,
+                "perception": 7
+            }
+        },
+        {
+            "id": 14,
+            "name": "Celestial Thunder Salvation Sutra",
+            "type": "Shendao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A Law of Shendao cultivation method that had been lost since ancient times, it is a way of gathering the faith of living beings in order to achieve divinity. Most schools of Law of Shendao share a lot of similarities, they only differ in the kind of spiritual catalyst being used, which summon different celestial beings for protection. Scripture of the Celestial Thunder Master is the legacy of Thunder Master. By cultivating this method, one would be able to harness the spiritual catalyst of Thunder Master to summon the many thunder spirits of Heavens as guardians. It emphasizes on Artifact Mastery and attacking.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 15,
+            "name": "Eight Heavens Sadhana",
+            "type": "Shendao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A Law of Shendao cultivation method that had been lost since ancient times, it is a way of gathering the Belief of living beings in order to achieve divinity. Most schools of Law of Shendao share a lot of similarities, they only differ in the kind of spiritual catalyst being used, which summon different celestial beings for protection. The heritage of Eight Heavens Sadhana came from the heaven beyond heavens to the west. By cultivating this method, one would be able to harness the spiritual catalyst of many heavens to summon the Eight Legion spirits as guardians. It emphasizes spellcraft.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 16,
+            "name": "Nether Salvation Sutra",
+            "type": "Shendao",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A Law of Shendao cultivation method that had been lost since ancient times, it is a way of gathering the faith of living beings in order to achieve divinity. Most schools of Law of Shendao share a lot of similarities, they only differ in the kind of spiritual catalyst being used, which summon different celestial beings for protection. Nether Salvation Sutra is the heritage of Specter Master. By cultivating this method, one would be able to harness the spiritual catalyst of the nine Netherworlds to summon the Nether spirits as guardians. It emphasizes on the ways of Protection.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 17,
+            "name": "Primordial Unity Body",
+            "type": "Physical",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A remold cultivation Law passed down from ancient times that imitates the shapes of all creatures, follows the will of the universe and obeys the law of the six directions. This spell excels at integrating with nature and step by step evolving into one unifying entity that signifies the intricacy of all the creatures in the world. The physical body becomes divine and embraces oblivion.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 18,
+            "name": "Barbarous Forging Body",
+            "type": "Physical",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "A remold cultivation Law created by human physical cultivators in reference to ancient sages' natural Yaoguai bodies. This Law is noted for its wild and aggressive nature and excels at refining bones to eventually create a Barbarous Forging Body. The physical body becomes divine and embraces oblivion.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 19,
+            "name": "Ancestral Yaoguai Body",
+            "type": "Physical",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "It is told to be the physical training cultivation Law passed down by the Ancestral Yaoguai. This Law excels at remolding organs, as it believes there's countless treasures hidden in the organs of all creatures and understanding their secrets will make a physical body divine and embrace oblivion. Note that this Law contains many secret bodies tailormade for various species of Yaoguai, and if the body structure is different, it will be hard for the Law to take effect.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        },
+        {
+            "id": 20,
+            "name": "Fallen Obliteration Body",
+            "type": "Physical",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "yinYang": "balanced",
+            "description": "In the past, some physical cultivators thought of this life as a cage and polar nights are the light cast from outside the cage. They absorbed a strange essence from the polar nights and used it to remold the body, believing it will eventually be transformed into a vehicle that breaks the cage and carries them away from the misery. This school of physical cultivators worshiped polar nights and were shunned by everyone else, thus named Obliteration Cult. Their foundational Law is therefore called Obliteration Body.",
+            "stats": {
+                "charisma": 0,
+                "constitution": 0,
+                "intelligence": 0,
+                "luck": 0,
+                "perception": 0
+            }
+        }
+    ],
+    "gatherQiItems": [
+        {
+            "id": 1,
+            "name": "None",
+            "image": "none.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
+            }
+        },
+        {
+            "id": 2,
+            "name": "Divine Jade",
+            "image": "divine-jade.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 3,
+            "name": "Dragon Feces",
+            "image": "feces.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 90,
+                "range": 3,
+                "decay": 0.95,
+                "startDecay": 0
+            }
+        },
+        {
+            "id": 4,
+            "name": "Holy Stone",
+            "image": "holy-stone.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 5,
+            "name": "Holy Stone Block",
+            "image": "holy-stone-block.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 30,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 6,
+            "name": "Illusion Sphere",
+            "image": "illusion-sphere.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 10,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 2
+            }
+        },
+        {
+            "id": 7,
+            "name": "Jade Essence",
+            "image": "jade-essence.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 25,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 8,
+            "name": "Ocher Essence",
+            "image": "ocher-essence.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 9,
+            "name": "Panacea Pill",
+            "image": "panacea-pill.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 90,
+                "range": 2,
+                "decay": 1,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 10,
+            "name": "Stone Essence",
+            "image": "stone-essence.webp",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "gatherQi": {
+                "power": 20,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 11,
+            "name": "Blazing Feather",
+            "image": "blazing-feather.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 12,
+            "name": "Crimson Fruit",
+            "image": "crimson-fruit.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 13,
+            "name": "Fire Essence Bar",
+            "image": "fire-essence-bar.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 30,
+                "range": 3,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 14,
+            "name": "Phoenix Fire Jade",
+            "image": "phoenix-fire-jade.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 200,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 15,
+            "name": "Phoenix Iron Bone",
+            "image": "phoenix-iron-bone.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 50,
+                "range": 3,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 16,
+            "name": "Phoenix Ironclad Feather",
+            "image": "phoenix-ironclad-feather.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 17,
+            "name": "Phoenix Mantle Feather",
+            "image": "phoenix-mantle-feather.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 5,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 18,
+            "name": "Phoenix Oblivion Feather",
+            "image": "phoenix-oblivion-feather.webp",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "gatherQi": {
+                "power": 150,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 19,
+            "name": "Lumina Core",
+            "image": "lumina-core.webp",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 3,
+                "decay": 0.6,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 20,
+            "name": "Lumina Core Bar",
+            "image": "lumina-core-bar.webp",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "gatherQi": {
+                "power": 30,
+                "range": 3,
+                "decay": 0.6,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 21,
+            "name": "Sage Fruit",
+            "image": "sage-fruit.webp",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 22,
+            "name": "Samsara Pill",
+            "image": "samsara-pill.webp",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "gatherQi": {
+                "power": 90,
+                "range": 2,
+                "decay": 1,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 23,
+            "name": "Black Scale",
+            "image": "black-scale.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 24,
+            "name": "Chaos Jade",
+            "image": "chaos-jade.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 200,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 25,
+            "name": "Divine Torch Dragon Scale",
+            "image": "divine-torch-dragon-scale.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 150,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 26,
+            "name": "White Scale",
+            "image": "white-scale.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 27,
+            "name": "Yin-Yang Crystal",
+            "image": "yin-yang-crystal.webp",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 5,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 28,
+            "name": "Dragon Scale",
+            "image": "dragon-scale.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 29,
+            "name": "Flood Dragon Devil Claw",
+            "image": "flood-dragon-devil-claw.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 50,
+                "range": 3,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 30,
+            "name": "Flood Dragon Forbidden Scale",
+            "image": "flood-dragon-forbidden-scale.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 200,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 31,
+            "name": "Flood Dragon Horn",
+            "image": "flood-dragon-horn.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 150,
+                "range": 2,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 32,
+            "name": "Flood Dragon Scale",
+            "image": "flood-dragon-scale.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 4,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 33,
+            "name": "Flood Dragon Wrath Vein",
+            "image": "flood-dragon-wrath-vein.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 5,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 34,
+            "name": "Ice Essence Bar",
+            "image": "ice-essence-bar.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 30,
+                "range": 3,
+                "decay": 0.95,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 35,
+            "name": "Prism Lotus",
+            "image": "prism-lotus.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 36,
+            "name": "Soul Pearl",
+            "image": "soul-pearl.webp",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "gatherQi": {
+                "power": 45,
+                "range": 3,
+                "decay": 0.7,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 37,
+            "name": "Gnarled Vine",
+            "image": "gnarled-vine.webp",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "gatherQi": {
+                "power": 75,
+                "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            }
+        },
+        {
+            "id": 38,
+            "name": "Parasol Timber",
+            "image": "parasol-timber.webp",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "gatherQi": {
+                "power": 30,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 2
+            }
+        },
+        {
+            "id": 39,
+            "name": "Phoenixwood",
+            "image": "phoenixwood.webp",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "gatherQi": {
+                "power": 35,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 2
+            }
+        },
+        {
+            "id": 40,
+            "name": "Spiritwood",
+            "image": "spiritwood.webp",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "gatherQi": {
+                "power": 20,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 2
+            }
+        },
+        {
+            "id": 41,
+            "name": "Spiritwood Timber",
+            "image": "spiritwood-timber.webp",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "gatherQi": {
+                "power": 15,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 2
+            }
+        }
+    ],
+    "weathers": [
+        {
+            "id": 1,
+            "name": "Air of Cultivation",
+            "contribution": 0.1,
+            "element": {
+                "name": "Any",
+                "image": "none.webp"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Noxious Air",
+            "contribution": 0.08,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Foehn Wind",
+            "contribution": 0.04,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Heat / Warm Wind",
+            "contribution": 0.04,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Qi Ignosphere",
+            "contribution": 0.04,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Drought",
+            "contribution": 0.02,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Clear Skies",
+            "contribution": 0.02,
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Thunderstorm",
+            "contribution": 0.08,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Polar Night",
+            "contribution": 0.08,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Rainstorm",
+            "contribution": 0.04,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Chilly Wind / Cold Winter",
+            "contribution": 0.04,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Qi Aquasphere",
+            "contribution": 0.04,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 13,
+            "name": "Heavy Rain / Heavy Snow",
+            "contribution": 0.03,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Light Rain / Light Snow",
+            "contribution": 0.02,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Cloudy",
+            "contribution": 0.02,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Rainy Season",
+            "contribution": 0.01,
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            }
+        },
+        {
+            "id": 17,
+            "name": "Rainstorm",
+            "contribution": 0.08,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 18,
+            "name": "Qi Aquasphere",
+            "contribution": 0.08,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 19,
+            "name": "Heavy Rain / Heavy Snow",
+            "contribution": 0.06,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Light Rain / Light Snow",
+            "contribution": 0.04,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Noxious Air",
+            "contribution": 0.04,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 22,
+            "name": "Heat / Warm Wind",
+            "contribution": 0.04,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 23,
+            "name": "Cloudy",
+            "contribution": 0.02,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 24,
+            "name": "Rainy Season",
+            "contribution": 0.02,
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            }
+        },
+        {
+            "id": 25,
+            "name": "Dust Storm",
+            "contribution": 0.08,
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            }
+        },
+        {
+            "id": 26,
+            "name": "Polar Night",
+            "contribution": 0.08,
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            }
+        },
+        {
+            "id": 27,
+            "name": "Thunderstorm",
+            "contribution": 0.04,
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            }
+        },
+        {
+            "id": 28,
+            "name": "Chilly Wind / Cold Winter",
+            "contribution": 0.04,
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            }
+        },
+        {
+            "id": 29,
+            "name": "Clear Skies",
+            "contribution": 0.02,
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            }
+        },
+        {
+            "id": 30,
+            "name": "Foehn Wind",
+            "contribution": 0.08,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 31,
+            "name": "Qi Ignosphere",
+            "contribution": 0.08,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 32,
+            "name": "Dust Storm",
+            "contribution": 0.04,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 33,
+            "name": "Drought",
+            "contribution": 0.04,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 34,
+            "name": "Cloudy",
+            "contribution": 0.02,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 35,
+            "name": "Rainy Season",
+            "contribution": 0.02,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 36,
+            "name": "Clear Skies",
+            "contribution": 0.02,
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            }
+        },
+        {
+            "id": 37,
+            "name": "Cloudy",
+            "contribution": 0.02,
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            }
+        },
+        {
+            "id": 38,
+            "name": "Rainy Season",
+            "contribution": 0.02,
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            }
+        },
+        {
+            "id": 39,
+            "name": "Clear Skies",
+            "contribution": 0.02,
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            }
+        }
+    ]
+}

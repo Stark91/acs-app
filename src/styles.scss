@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url('./assets/images/background/ACSWallPaper1_2560×1440.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+mat-spinner {
+  margin: auto;
+}

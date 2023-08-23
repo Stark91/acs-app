@@ -1,0 +1,8 @@
+<div *ngIf="laws.length > 0">
+    <div mat-subheader>{{lawType}} laws ({{laws.length}})</div>
+    <mat-list-item *ngFor="let law of laws">
+        <a mat-list-item [routerLink]="law.id.toString()">
+            <p matLine><img class="element" src="{{imgSrcUrl}}/{{law.element.image}}" /> {{ law.name }} </p>
+        </a>
+    </mat-list-item>
+</div>
