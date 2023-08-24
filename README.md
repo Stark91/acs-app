@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## JSON server
 
 Run `json-server --watch db.json` in `src/assets/json` to start JSON server. Data will not be loaded if you do not do this.
+
+## Internationalization
+
+Run `ng serve --configuration=en|fr` for a dev server in english or in french.
