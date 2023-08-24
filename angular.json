@@ -40,6 +40,9 @@
         "locales": {
           "fr": {
             "translation": "src/locale/messages.fr.xlf"
+          },
+          "en": {
+            "translation": "src/locale/messages.xlf"
           }
         }
       },
@@ -92,6 +95,9 @@
             },
             "fr" : {
               "localize": ["fr"]
+            },
+            "en" : {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -107,6 +113,9 @@
             },
             "fr": {
               "browserTarget": "acs-app:build:development,fr"
+            },
+            "en": {
+              "browserTarget": "acs-app:build:development,en"
             }
           },
           "defaultConfiguration": "development"
