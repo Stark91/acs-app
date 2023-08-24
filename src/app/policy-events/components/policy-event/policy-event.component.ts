@@ -14,6 +14,22 @@ import { Action } from '../../enums/action.enum';
 })
 export class PolicyEventComponent implements OnInit {
 
+  //i18n
+  actionsTableHeader = $localize`:@@actions:Actions`;
+  conditionsTableHeader = $localize`:@@conditions:Conditions`;
+  outcomesTableHeader = $localize`:@@outcomes:Outcomes`;
+  backButtonText = $localize`:@@back:Back`;
+  battleRowText = $localize`:@@battle:Battle`;
+  charismaRowText = $localize`:@@charisma:Charisma`;
+  discipleRowText = $localize`:@@disciple:Disciple`;
+  foodRowText = $localize`:@@food:Food`;
+  intelligenceRowText = $localize`:@@intelligence:Intelligence`;
+  noActionRowText = $localize`:@@noAction:No action`;
+  socialRowText = $localize`:@@social:Social`;
+  spiritStoneRowText = $localize`:@@spiritStone:Spirit stone`;
+  stoneRowText = $localize`:@@stone:Stone`;
+  woodRowText = $localize`:@@wood:Wood`;
+
   loadingEvent$!: Observable<boolean>;
   loadingOutcomes$!: Observable<boolean>;
   event$!: Observable<PolicyEvent>;
@@ -39,16 +55,16 @@ export class PolicyEventComponent implements OnInit {
 
   initActionLabels() {
     this.actions = [
-      {value: Action.BATTLE, label: 'Battle'},
-      {value: Action.CHARISMA, label: 'Charisma'},
-      {value: Action.DISCIPLE, label: 'Disciple'},
-      {value: Action.FOOD, label: 'Food'},
-      {value: Action.INTELLIGENCE, label: 'Intelligence'},
-      {value: Action.NO_ACTION, label: 'No action'},
-      {value: Action.SOCIAL, label: 'Social'},
-      {value: Action.SPIRIT_STONE, label: 'Spirit stone'},
-      {value: Action.STONE, label: 'Stone'},
-      {value: Action.WOOD, label: 'Wood'}
+      {value: Action.BATTLE, label: this.battleRowText},
+      {value: Action.CHARISMA, label: this.charismaRowText},
+      {value: Action.DISCIPLE, label: this.discipleRowText},
+      {value: Action.FOOD, label: this.foodRowText},
+      {value: Action.INTELLIGENCE, label: this.intelligenceRowText},
+      {value: Action.NO_ACTION, label: this.noActionRowText},
+      {value: Action.SOCIAL, label: this.socialRowText},
+      {value: Action.SPIRIT_STONE, label: this.spiritStoneRowText},
+      {value: Action.STONE, label: this.stoneRowText},
+      {value: Action.WOOD, label: this.woodRowText}
     ]
   }
 
@@ -68,6 +84,6 @@ export class PolicyEventComponent implements OnInit {
   }
 
   onGoBack() {
-    this.router.navigateByUrl('/events');
+    this.router.navigateByUrl('/policy-events');
   }
 }

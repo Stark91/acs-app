@@ -1,79 +1,77 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>Golden core</mat-card-title>
+        <mat-card-title>{{ goldenCoreTitle }}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <div class="text">
-            Enter factors to get an estimated total golden core score.
-        </div>
+        <div class="text">{{ goldenCoreDescription }}</div>
         <div class="form">
             <mat-form-field>
-                <mat-label>Tile Qi</mat-label>
+                <mat-label>{{ tileQiInputLabel }}</mat-label>
                 <input matInput type="number" min="0" [formControl]="tileQiCtrl">
-                <mat-icon matPrefix matTooltip="You can calculate your tile qi on the Cultivation Room page." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="tileQiCtrl.hasError('min')">Value must be greater than or equal to 0</mat-error>
+                <mat-icon matPrefix [matTooltip]="tileQiInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="tileQiCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Law match</mat-label>
+                <mat-label>{{ lawMatchInputLabel }}</mat-label>
                 <input matInput type="number" min="50" [formControl]="lawMatchCtrl">
-                <mat-icon matPrefix matTooltip="You can calculate your law match after choosing a law on the Laws page." matTooltipPosition="left">info</mat-icon>
+                <mat-icon matPrefix [matTooltip]="lawMatchInputTooltip" matTooltipPosition="left">info</mat-icon>
                 <span matTextSuffix>%</span>
-                <mat-error *ngIf="lawMatchCtrl.hasError('min')">Value must be greater than or equal to 50 %</mat-error>
+                <mat-error *ngIf="lawMatchCtrl.hasError('min')">{{ inputErrorMin }} 50 %</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Luck</mat-label>
+                <mat-label>{{ luckInputLabel }}</mat-label>
                 <input matInput type="number" min="0" max="10" [formControl]="luckCtrl">
-                <mat-icon matPrefix matTooltip="Your cultivator luck stat." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="luckCtrl.hasError('min')">Value must be greater than or equal to 0</mat-error>
-                <mat-error *ngIf="luckCtrl.hasError('max')">Value must be lower than or equal to 10</mat-error>
+                <mat-icon matPrefix [matTooltip]="luckInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="luckCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+                <mat-error *ngIf="luckCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Mental state</mat-label>
+                <mat-label>{{ mentalStateInputLabel }}</mat-label>
                 <input matInput type="number" min="0" [formControl]="mentalStateCtrl">
-                <mat-icon matPrefix matTooltip="Your cultivator mental state." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="mentalStateCtrl.hasError('min')">Value must be greater than or equal to 0</mat-error>
+                <mat-icon matPrefix [matTooltip]="mentalStateInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="mentalStateCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Yin yang</mat-label>
+                <mat-label>{{ yinYangInputLabel }}</mat-label>
                 <input matInput type="number" min="0" [formControl]="yinYangCtrl">
-                <mat-icon matPrefix matTooltip="Average is near 1, it depends on day of the year, hour of the day, weather (ambiant light)." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="yinYangCtrl.hasError('min')">Value must be greater than or equal to 0</mat-error>
+                <mat-icon matPrefix [matTooltip]="yinYangInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="yinYangCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Weather</mat-label>
+                <mat-label>{{ weatherInputLabel }}</mat-label>
                 <mat-select [formControl]="weatherCtrl" multiple>
                     <div *ngIf="weathers$ |async as weathers">
-                        <mat-option *ngFor="let weather of weathers" [value]="weather.contribution"> <strong>{{weather.name}}</strong> contribution for <img src="{{elementImgSrcUrl}}/{{weather.element.image}}" /> is {{weather.contribution}}</mat-option>
+                        <mat-option *ngFor="let weather of weathers" [value]="weather.contribution"> <strong>{{weather.name}}</strong> {{ weatherContributeForText }}<img class="icon" src="{{elementImgSrcUrl}}/{{weather.element.image}}" />{{ weatheratTheLevelOfText }} {{weather.contribution}}</mat-option>
                     </div>
                 </mat-select>
-                <mat-icon matPrefix matTooltip="Select the weathers that contribute to your law element. Air of Cultivation contributes to any element." matTooltipPosition="left">info</mat-icon>
+                <mat-icon matPrefix [matTooltip]="weatherInputTooltip" matTooltipPosition="left">info</mat-icon>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Season</mat-label>
+                <mat-label>{{ seasonInputLabel }}</mat-label>
                 <input matInput type="number" step="0.1" min="0" max="1.3" [formControl]="seasonCtrl">
-                <mat-icon matPrefix matTooltip="You can estimate season factor at ACS Fandom Wiki > Golden Core Breakthrough > Season." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="seasonCtrl.hasError('min')">Value must be greater than or equal to 1</mat-error>
-                <mat-error *ngIf="seasonCtrl.hasError('max')">Value must be lower than or equal to 1.3</mat-error>
+                <mat-icon matPrefix [matTooltip]="seasonInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="seasonCtrl.hasError('min')">{{ inputErrorMin }} 1</mat-error>
+                <mat-error *ngIf="seasonCtrl.hasError('max')">{{ inputErrorMax }} 1.3</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Tile element</mat-label>
+                <mat-label>{{ tileElementInputLabel }}</mat-label>
                 <input matInput type="number" min="0.5" max="1.5" [formControl]="tileElementCtrl">
-                <mat-icon matPrefix matTooltip="Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather)." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="seasonCtrl.hasError('min')">Value must be greater than or equal to 0.5</mat-error>
-                <mat-error *ngIf="seasonCtrl.hasError('max')">Value must be lower than or equal to 1.5</mat-error>
+                <mat-icon matPrefix [matTooltip]="tileElementInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="seasonCtrl.hasError('min')">{{ inputErrorMin }} 0.5</mat-error>
+                <mat-error *ngIf="seasonCtrl.hasError('max')">{{ inputErrorMax }} 1.5</mat-error>
             </mat-form-field>
             <mat-form-field>
-                <mat-label>Max Qi</mat-label>
+                <mat-label>{{ maxQiInputLabel }}</mat-label>
                 <input matInput type="number" [formControl]="maxQiCtrl">
-                <mat-icon matPrefix matTooltip="Your cultivator Max Qi. Max Qi determines the breakthrough duration." matTooltipPosition="left">info</mat-icon>
-                <mat-error *ngIf="seasonCtrl.hasError('min')">Value must be greater than or equal to 0</mat-error>
+                <mat-icon matPrefix [matTooltip]="maxQiInputTooltip" matTooltipPosition="left">info</mat-icon>
+                <mat-error *ngIf="seasonCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
             </mat-form-field>
         </div>
         <div class="form">
-            <button mat-flat-button color="warn"> Score per second {{scorePerSecond.toFixed(0)}} </button>
-            <button mat-flat-button color="warn" matTooltip="An in-game day is 600s." matTooltipPosition="below"> Duration {{duration}}s </button>
-            <button mat-flat-button color="warn"> Total score {{totalScore.toFixed(0)}} </button>
-            <button mat-flat-button color="warn"> Tier {{tier}} </button>
+            <button mat-flat-button color="warn"> {{ scorePerSecondButtonText }} {{scorePerSecond.toFixed(0)}} </button>
+            <button mat-flat-button color="warn" [matTooltip]="durationButtonTooltip" matTooltipPosition="below"> {{ durationButtonText }} {{duration}}s </button>
+            <button mat-flat-button color="warn"> {{ totalScoreButtonText }} {{totalScore.toFixed(0)}} </button>
+            <button mat-flat-button color="warn"> {{ tierButtonText }} {{tier}} </button>
         </div>
     </mat-card-content>
 </mat-card>

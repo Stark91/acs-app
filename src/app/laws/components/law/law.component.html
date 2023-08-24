@@ -15,7 +15,7 @@
     <mat-card-actions>
         <mat-spinner *ngIf="loadingLaw$ | async; else buttons"></mat-spinner>
         <ng-template #buttons>
-            <button mat-flat-button color="primary" (click)="onGoBack()">Back</button>
+            <button mat-flat-button color="primary" (click)="onGoBack()">{{ backButtonText }}</button>
         </ng-template>
     </mat-card-actions>
 </mat-card>

@@ -1,36 +1,36 @@
-<mat-card-subtitle>Cultivator stats</mat-card-subtitle>
+<mat-card-subtitle>{{ cultivatorStatsTitle }}</mat-card-subtitle>
 <div class="form">
     <mat-form-field>
-        <mat-label>Charisma</mat-label>
+        <mat-label>{{ charismaInputLabel }}</mat-label>
         <input matInput type="number" min="0" max="10" [formControl]="charismaCtrl">
-        <mat-error *ngIf="charismaCtrl.hasError('min')">Value must be greater than 0</mat-error>
-        <mat-error *ngIf="charismaCtrl.hasError('max')">Value must be lower than 10</mat-error>
+        <mat-error *ngIf="charismaCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+        <mat-error *ngIf="charismaCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <mat-label>Constitution</mat-label>
+        <mat-label>{{ constitutionInputLabel }}</mat-label>
         <input matInput type="number" min="0" max="10" [formControl]="constitutionCtrl">
-        <mat-error *ngIf="constitutionCtrl.hasError('min')">Value must be greater than 0</mat-error>
-        <mat-error *ngIf="constitutionCtrl.hasError('max')">Value must be lower than 10</mat-error>
+        <mat-error *ngIf="constitutionCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+        <mat-error *ngIf="constitutionCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <mat-label>Intelligence</mat-label>
+        <mat-label>{{ intelligenceInputLabel }}</mat-label>
         <input matInput type="number" min="0" max="10" [formControl]="intelligenceCtrl">
-        <mat-error *ngIf="intelligenceCtrl.hasError('min')">Value must be greater than 0</mat-error>
-        <mat-error *ngIf="intelligenceCtrl.hasError('max')">Value must be lower than 10</mat-error>
+        <mat-error *ngIf="intelligenceCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+        <mat-error *ngIf="intelligenceCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <mat-label>Luck</mat-label>
+        <mat-label>{{ luckInputLabel }}</mat-label>
         <input matInput type="number" min="0" max="10" [formControl]="luckCtrl">
-        <mat-error *ngIf="luckCtrl.hasError('min')">Value must be greater than 0</mat-error>
-        <mat-error *ngIf="luckCtrl.hasError('max')">Value must be lower than 10</mat-error>
+        <mat-error *ngIf="luckCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+        <mat-error *ngIf="luckCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <mat-label>Perception</mat-label>
+        <mat-label>{{ perceptionInputLabel }}</mat-label>
         <input matInput type="number" min="0" max="10" [formControl]="perceptionCtrl">
-        <mat-error *ngIf="perceptionCtrl.hasError('min')">Value must be greater than 0</mat-error>
-        <mat-error *ngIf="perceptionCtrl.hasError('max')">Value must be lower than 10</mat-error>
+        <mat-error *ngIf="perceptionCtrl.hasError('min')">{{ inputErrorMin }} 0</mat-error>
+        <mat-error *ngIf="perceptionCtrl.hasError('max')">{{ inputErrorMax }} 10</mat-error>
     </mat-form-field>
 </div>
 <div class="result">
-    <button mat-flat-button color="warn">Law match {{getLawMatch() | percent}}</button>
+    <button mat-flat-button color="warn">{{ lawMatchButtonText }} {{getLawMatch() | percent}}</button>
 </div>

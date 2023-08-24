@@ -12,6 +12,9 @@ import { PolicyEvent } from '../../models/policy-event.model';
 })
 export class PolicyEventsListComponent implements OnInit {
 
+  //i18n
+  policySelectLabel = $localize`:@@policySelectLabel:Select a policy`;
+
   loading$!: Observable<boolean>;
   events$!: Observable<PolicyEvent[]>;
   policyCtrl!: FormControl;

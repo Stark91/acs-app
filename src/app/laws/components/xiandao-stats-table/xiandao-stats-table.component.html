@@ -1,23 +1,23 @@
-<mat-card-subtitle>Law stats</mat-card-subtitle>
+<mat-card-subtitle>{{ lawStatsTitle }}</mat-card-subtitle>
 <table mat-table [dataSource]="data">
     <ng-container matColumnDef="charisma">
-        <th mat-header-cell *matHeaderCellDef>Charisma</th>
+        <th mat-header-cell *matHeaderCellDef>{{ charismaTableHeader }}</th>
         <td mat-cell *matCellDef="let element"> {{element.charisma}} </td>
     </ng-container>
     <ng-container matColumnDef="constitution">
-        <th mat-header-cell *matHeaderCellDef>Constitution</th>
+        <th mat-header-cell *matHeaderCellDef>{{ constitutionTableHeader }}</th>
         <td mat-cell *matCellDef="let element"> {{element.constitution}} </td>
     </ng-container>
     <ng-container matColumnDef="intelligence">
-        <th mat-header-cell *matHeaderCellDef>Intelligence</th>
+        <th mat-header-cell *matHeaderCellDef>{{ intelligenceTableHeader }}</th>
         <td mat-cell *matCellDef="let element"> {{element.intelligence}} </td>
     </ng-container>
     <ng-container matColumnDef="luck">
-        <th mat-header-cell *matHeaderCellDef>Luck</th>
+        <th mat-header-cell *matHeaderCellDef>{{ luckTableHeader }}</th>
         <td mat-cell *matCellDef="let element"> {{element.luck}} </td>
     </ng-container>
     <ng-container matColumnDef="perception">
-        <th mat-header-cell *matHeaderCellDef>Perception</th>
+        <th mat-header-cell *matHeaderCellDef>{{ perceptionTableHeader }}</th>
         <td mat-cell *matCellDef="let element"> {{element.perception}} </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

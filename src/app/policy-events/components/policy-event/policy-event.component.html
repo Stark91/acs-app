@@ -3,15 +3,15 @@
         <p>{{ event.description }}</p>
         <table mat-table *ngIf="outcomes$ | async as outcomes" [dataSource]="outcomes">
             <ng-container matColumnDef="action">
-                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <th mat-header-cell *matHeaderCellDef>{{ actionsTableHeader }}</th>
                 <td mat-cell *matCellDef="let element"> {{getActionLabel(element.action)}} </td>
             </ng-container>
             <ng-container matColumnDef="condition">
-                <th mat-header-cell *matHeaderCellDef>Conditions</th>
+                <th mat-header-cell *matHeaderCellDef>{{ conditionsTableHeader }}</th>
                 <td mat-cell *matCellDef="let element"> {{element.condition}} </td>
             </ng-container>
             <ng-container matColumnDef="outcome">
-                <th mat-header-cell *matHeaderCellDef>Outcomes</th>
+                <th mat-header-cell *matHeaderCellDef>{{ outcomesTableHeader }}</th>
                 <td mat-cell *matCellDef="let element"> {{element.outcome}} </td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -21,7 +21,7 @@
     <mat-card-actions>
         <mat-spinner *ngIf="(loadingEvent$ | async) || (loadingOutcomes$ | async); else buttons"></mat-spinner>
         <ng-template #buttons>
-            <button mat-flat-button color="primary" (click)="onGoBack()">Back</button>
+            <button mat-flat-button color="primary" (click)="onGoBack()">{{ backButtonText }}</button>
         </ng-template>
     </mat-card-actions>
 </mat-card>

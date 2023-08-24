@@ -9,6 +9,14 @@ import { Stats } from '../../../shared/models/stats.model';
 })
 export class XiandaoStatsTableComponent implements OnInit {
 
+  //i18n
+  lawStatsTitle = $localize`:@@lawStats:Law stats`;
+  charismaTableHeader = $localize`:@@charisma:Charisma`;
+  constitutionTableHeader = $localize`:@@constitution:Constitution`;
+  intelligenceTableHeader = $localize`:@@intelligence:Intelligence`;
+  luckTableHeader = $localize`:@@luck:Luck`;
+  perceptionTableHeader = $localize`:@@perception:Perception`;
+
   @Input() law!: Law;
   data!: Stats[];
   displayedColumns: string[] = ['charisma', 'constitution', 'intelligence', 'luck', 'perception'];

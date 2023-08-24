@@ -35,6 +35,14 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "acs",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -42,6 +50,7 @@
             "outputPath": "dist/acs-app",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "localize": true,
             "polyfills": [
               "zone.js"
             ],
@@ -80,6 +89,9 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "fr" : {
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"
@@ -92,6 +104,9 @@
             },
             "development": {
               "browserTarget": "acs-app:build:development"
+            },
+            "fr": {
+              "browserTarget": "acs-app:build:development,fr"
             }
           },
           "defaultConfiguration": "development"

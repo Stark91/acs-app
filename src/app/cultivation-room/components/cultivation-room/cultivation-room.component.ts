@@ -12,6 +12,23 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class CultivationRoomComponent implements OnInit {
 
+  //i18n
+  cultivationRoomTitle = $localize`:@@cultivationRoom:Cultivation room`;
+  cultivationRoomDescription = $localize`:@@cultivationRoomDescription:Select Gather Qi items by clicking on tiles to simulate cultivation room and get Qi amount on the breakthrough tile (center).`
+  spiritSoilCtrlTooltip = $localize`:@@spiritSoilCtrlTooltip:Spirit soil add 40 Qi on the tile`;
+  spiritSoilCtrlLabel = $localize`:@@spiritSoilCtrlLabel:Cushion on spirit soil`;
+  qiCushionCtrlTooltip = $localize`:@@qiCushionCtrlTooltip:Qi Cushion add 60 Qi on the tile`;
+  qiCushionCtrlLabel = $localize`:@@qiCushionCtrlLabel:Cushion is Qi Cushion`;
+  sizeCtrlLabel = $localize`:@@sizeCtrlLabel:Size`;
+  clearGridButtonLabel = $localize`:@@clearGridButtonLabel:Clear grid`;
+  totalGatherQiOnCushionButtonLabel = $localize`:@@totalGatherQiOnCushionButtonLabel:Gathered Qi on cushion`;
+  earthLabel = $localize`:@@earth:Earth`;
+  fireLabel = $localize`:@@fire:Fire`;
+  metalLabel = $localize`:@@metal:Metal`;
+  noneLabel = $localize`:@@none:None`;
+  waterLabel = $localize`:@@water:Water`;
+  woodLabel = $localize`:@@wood:Wood`;
+  
   step = -1;
 
   size = 7;
@@ -187,14 +204,6 @@ export class CultivationRoomComponent implements OnInit {
 
   setStep(index: number) {
     this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
   }
 }
 

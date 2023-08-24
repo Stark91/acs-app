@@ -12,6 +12,37 @@ import { Weather } from '../../models/weather.model';
 })
 export class GoldenCoreComponent implements OnInit {
 
+  //i18n
+  goldenCoreTitle = $localize`:@@goldenCore:Golden core`;
+  goldenCoreDescription = $localize`:@@goldenCoreDescription:Enter factors to get an estimated total golden core score.`;
+  inputErrorMin = $localize`:@@inputErrorMin:Value must be greater than or equal to`;
+  inputErrorMax = $localize`:@@inputErrorMax:Value must be lower than or equal to`;
+  tileQiInputLabel = $localize`:@@tileQi:Tile Qi`;
+  tileQiInputTooltip = $localize`:@@tileQiInputTooltip:You can calculate your tile qi on the Cultivation Room page.`;
+  lawMatchInputLabel = $localize`:@@lawMatch:Law match`;
+  lawMatchInputTooltip = $localize`:@@lawMatchInputTooltip:You can calculate your law match after choosing a law on the Laws page.`;
+  luckInputLabel = $localize`:@@luck:Luck`;
+  luckInputTooltip = $localize`:@@luckInputTooltip:Your cultivator luck stat.`;
+  mentalStateInputLabel = $localize`:@@mentalState:Mental state`;
+  mentalStateInputTooltip = $localize`:@@mentalStateInputTooltip:Your cultivator mental state.`;
+  yinYangInputLabel = $localize`:@@yinYang:Yin yang`;
+  yinYangInputTooltip = $localize`:@@yinYangInputTooltip:Average is near 1, it depends on day of the year, hour of the day, weather (ambiant light).`;
+  weatherInputLabel = $localize`:@@weather:Weather`;
+  weatherInputTooltip = $localize`:@@weatherInputTooltip:Select the weathers that contribute to your law element. Air of Cultivation contributes to any element.`;
+  seasonInputLabel = $localize`:@@season:Season`;
+  seasonInputTooltip = $localize`:@@seasonInputTooltip:You can estimate season factor at ACS Fandom Wiki > Golden Core Breakthrough > Season.`;
+  tileElementInputLabel = $localize`:@@tileElement:Tile element`;
+  tileElementInputTooltip = $localize`:@@tileElementInputTooltip:Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).`;
+  maxQiInputLabel = $localize`:@@maxQi:Max Qi`;
+  maxQiInputTooltip = $localize`:@@maxQiInputTooltip:Your cultivator Max Qi. Max Qi determines the breakthrough duration.`;
+  weatherContributeForText = $localize`:@@contributeFor:contribute for`;
+  weatheratTheLevelOfText = $localize`:@@atTheLevelOf:at the level of`;
+  scorePerSecondButtonText = $localize`:@@scorePerSecond:Score per second`;
+  durationButtonText = $localize`:@@duration:Duration`;
+  durationButtonTooltip = $localize`:@@durationButtonTooltip:An in-game day is 600s.`;
+  totalScoreButtonText = $localize`:@@totalScore:Total score`;
+  tierButtonText = $localize`:@@tier:Tier`;
+  
   tileQiCtrl!: FormControl;
   lawMatchCtrl!: FormControl;
   luckCtrl!: FormControl;

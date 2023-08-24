@@ -10,6 +10,17 @@ import { map, startWith } from 'rxjs';
 })
 export class XiandaoLawMatchFormComponent implements OnInit {
 
+  //i18n
+  cultivatorStatsTitle = $localize`:@@cultivatorStats:Cultivator stats`;
+  charismaInputLabel = $localize`:@@charisma:Charisma`;
+  constitutionInputLabel = $localize`:@@constitution:Constitution`;
+  intelligenceInputLabel = $localize`:@@intelligence:Intelligence`;
+  luckInputLabel = $localize`:@@luck:Luck`;
+  perceptionInputLabel = $localize`:@@perception:Perception`;
+  inputErrorMin = $localize`:@@inputErrorMin:Value must be greater than or equal to`;
+  inputErrorMax = $localize`:@@inputErrorMax:Value must be lower than or equal to`;
+  lawMatchButtonText = $localize`:@@lawMatch:Law match`;
+
   @Input() law!: Law;
   charismaCtrl!: FormControl;
   constitutionCtrl!: FormControl;

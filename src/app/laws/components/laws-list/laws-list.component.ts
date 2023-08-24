@@ -11,6 +11,9 @@ import { LawsService } from '../../services/law.service';
   styleUrls: ['./laws-list.component.scss']
 })
 export class LawsListComponent implements OnInit {
+
+  //i18n
+  lawTypeSelectLabel = $localize`:@@lawTypeSelectLabel:Select a law type`;
   
   loading$!: Observable<boolean>;
   earthLaws$!: Observable<Law[]>;

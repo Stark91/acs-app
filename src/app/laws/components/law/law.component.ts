@@ -12,6 +12,9 @@ import { LawType } from '../../enums/law-type.enum';
 })
 export class LawComponent implements OnInit {
 
+  //i18n
+  backButtonText = $localize`:@@back:Back`;
+
   loadingLaw$!: Observable<boolean>;
   law$!: Observable<Law>;
   isXiandao$!: Observable<boolean>;

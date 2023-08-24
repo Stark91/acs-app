@@ -1,6 +1,6 @@
 <mat-card>
     <mat-form-field color="primary">
-        <mat-label>Select a policy</mat-label>
+        <mat-label>{{ policySelectLabel }}</mat-label>
         <mat-select disableRipple [formControl]="policyCtrl">
             <mat-option *ngFor="let option of policyCtrlOptions" [value]="option.value">{{ option.label }}</mat-option>
         </mat-select>

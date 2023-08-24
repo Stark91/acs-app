@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="cultivationRoom" datatype="html">
+        <source>Cultivation room</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goldenCore" datatype="html">
+        <source>Golden core</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="laws" datatype="html">
+        <source>Laws</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="agencyEvents" datatype="html">
+        <source>Agency events</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/components/header/header.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cultivationRoomDescription" datatype="html">
+        <source>Select Gather Qi items by clicking on tiles to simulate cultivation room and get Qi amount on the breakthrough tile (center).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="spiritSoilCtrlTooltip" datatype="html">
+        <source>Spirit soil add 40 Qi on the tile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="spiritSoilCtrlLabel" datatype="html">
+        <source>Cushion on spirit soil</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="qiCushionCtrlTooltip" datatype="html">
+        <source>Qi Cushion add 60 Qi on the tile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="qiCushionCtrlLabel" datatype="html">
+        <source>Cushion is Qi Cushion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sizeCtrlLabel" datatype="html">
+        <source>Size</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clearGridButtonLabel" datatype="html">
+        <source>Clear grid</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="totalGatherQiOnCushionButtonLabel" datatype="html">
+        <source>Gathered Qi on cushion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="earth" datatype="html">
+        <source>Earth</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fire" datatype="html">
+        <source>Fire</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="metal" datatype="html">
+        <source>Metal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="none" datatype="html">
+        <source>None</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="water" datatype="html">
+        <source>Water</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wood" datatype="html">
+        <source>Wood</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goldenCoreDescription" datatype="html">
+        <source>Enter factors to get an estimated total golden core score.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputErrorMin" datatype="html">
+        <source>Value must be greater than or equal to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputErrorMax" datatype="html">
+        <source>Value must be lower than or equal to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tileQi" datatype="html">
+        <source>Tile Qi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tileQiInputTooltip" datatype="html">
+        <source>You can calculate your tile qi on the Cultivation Room page.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lawMatch" datatype="html">
+        <source>Law match</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lawMatchInputTooltip" datatype="html">
+        <source>You can calculate your law match after choosing a law on the Laws page.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="luck" datatype="html">
+        <source>Luck</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="luckInputTooltip" datatype="html">
+        <source>Your cultivator luck stat.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mentalState" datatype="html">
+        <source>Mental state</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mentalStateInputTooltip" datatype="html">
+        <source>Your cultivator mental state.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yinYang" datatype="html">
+        <source>Yin yang</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yinYangInputTooltip" datatype="html">
+        <source>Average is near 1, it depends on day of the year, hour of the day, weather (ambiant light).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="weather" datatype="html">
+        <source>Weather</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="weatherInputTooltip" datatype="html">
+        <source>Select the weathers that contribute to your law element. Air of Cultivation contributes to any element.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="season" datatype="html">
+        <source>Season</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seasonInputTooltip" datatype="html">
+        <source>You can estimate season factor at ACS Fandom Wiki &gt; Golden Core Breakthrough &gt; Season.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tileElement" datatype="html">
+        <source>Tile element</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tileElementInputTooltip" datatype="html">
+        <source>Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="maxQi" datatype="html">
+        <source>Max Qi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="maxQiInputTooltip" datatype="html">
+        <source>Your cultivator Max Qi. Max Qi determines the breakthrough duration.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contributeFor" datatype="html">
+        <source>contribute for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="atTheLevelOf" datatype="html">
+        <source>at the level of</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="scorePerSecond" datatype="html">
+        <source>Score per second</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="duration" datatype="html">
+        <source>Duration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="durationButtonTooltip" datatype="html">
+        <source>An in-game day is 600s.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="totalScore" datatype="html">
+        <source>Total score</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="tier" datatype="html">
+        <source>Tier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="back" datatype="html">
+        <source>Back</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/law/law.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lawTypeAmount" datatype="html">
+        <source><x id="PH" equiv-text="this.lawType"/> laws</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/laws-list-section/laws-list-section.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lawTypeSelectLabel" datatype="html">
+        <source>Select a law type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/laws-list/laws-list.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cultivatorStats" datatype="html">
+        <source>Cultivator stats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="charisma" datatype="html">
+        <source>Charisma</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="constitution" datatype="html">
+        <source>Constitution</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="intelligence" datatype="html">
+        <source>Intelligence</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="perception" datatype="html">
+        <source>Perception</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-law-match-form/xiandao-law-match-form.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lawStats" datatype="html">
+        <source>Law stats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/laws/components/xiandao-stats-table/xiandao-stats-table.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="actions" datatype="html">
+        <source>Actions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="conditions" datatype="html">
+        <source>Conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="outcomes" datatype="html">
+        <source>Outcomes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="battle" datatype="html">
+        <source>Battle</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="disciple" datatype="html">
+        <source>Disciple</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="food" datatype="html">
+        <source>Food</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noAction" datatype="html">
+        <source>No action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="social" datatype="html">
+        <source>Social</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="spiritStone" datatype="html">
+        <source>Spirit stone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="stone" datatype="html">
+        <source>Stone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="policySelectLabel" datatype="html">
+        <source>Select a policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/policy-events/components/policy-events-list/policy-events-list.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

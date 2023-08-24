@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+  cultivationRoomLink = $localize`:@@cultivationRoom:Cultivation room`;
+  goldenCoreLink = $localize`:@@goldenCore:Golden core`;
+  lawsLink = $localize`:@@laws:Laws`;
+  agencyEventsLink = $localize`:@@agencyEvents:Agency events`;
 }
