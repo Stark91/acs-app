@@ -158,6 +158,46 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="earthEmitButtonTooltip" datatype="html">
+        <source>Earth element strength</source>
+        <target>Force de l'élément Terre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fireEmitButtonTooltip" datatype="html">
+        <source>Fire element strength</source>
+        <target>Force de l'élément Feu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="matelEmitButtonTooltip" datatype="html">
+        <source>Metal element strength</source>
+        <target>Force de l'élément Métal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="waterEmitButtonTooltip" datatype="html">
+        <source>Water element strength</source>
+        <target>Force de l'élément Eau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="woodEmitButtonTooltip" datatype="html">
+        <source>Wood element strength</source>
+        <target>Force de l'élément Bois</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">
         <source>Enter factors to get an estimated total golden core breakthrough score.</source>
         <target>Entrer les facteurs pour obtenir une valeur approximative de votre score total de percée du Noyau doré</target>

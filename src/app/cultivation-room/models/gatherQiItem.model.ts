@@ -11,4 +11,10 @@ export class GatherQiItem {
         decay: number;
         startDecay: number;
     }
+    elementEmit!: {
+        power: number;
+        range: number;
+        decay: number;
+        startDecay: number;
+    }
 }

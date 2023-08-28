@@ -28,9 +28,16 @@ export class CultivationRoomComponent implements OnInit {
   noneLabel = $localize`:@@none:None`;
   waterLabel = $localize`:@@water:Water`;
   woodLabel = $localize`:@@wood:Wood`;
+  earthEmitButtonTooltip = $localize`:@@earthEmitButtonTooltip:Earth element strength`;
+  fireEmitButtonTooltip = $localize`:@@fireEmitButtonTooltip:Fire element strength`;
+  metalEmitButtonTooltip = $localize`:@@matelEmitButtonTooltip:Metal element strength`;
+  waterEmitButtonTooltip = $localize`:@@waterEmitButtonTooltip:Water element strength`;
+  woodEmitButtonTooltip = $localize`:@@woodEmitButtonTooltip:Wood element strength`;
   
+  //expansion panels
   step = -1;
 
+  //grid
   size = 7;
   sizeCtrl!: FormControl;
   cushionTile = Math.trunc((this.size**2 - 1) / 2);
@@ -45,7 +52,26 @@ export class CultivationRoomComponent implements OnInit {
   }[];
   totalGatherQiOnCushion!: number;
   currentItem!: GatherQiItem;
+  isSpiritSoil!: boolean;
+  isQiCushion!: boolean;
+  spiritSoilCtrl!: FormControl;
+  qiCushionCtrl!: FormControl;
+  elements!: {
+    earthEmit: number,
+    fireEmit: number,
+    metalEmit: number,
+    waterEmit: number,
+    woodEmit: number
+  };
+  elementsStrength!: {
+    earthStrength: number,
+    fireStrength: number,
+    metalStrength: number,
+    waterStrength: number,
+    woodStrength: number
+  }
 
+  //observables
   loadingGatherQiItems$!: Observable<boolean>;
   earthGatherQiItems$!: Observable<GatherQiItem[]>;
   fireGatherQiItems$!: Observable<GatherQiItem[]>;
@@ -54,14 +80,10 @@ export class CultivationRoomComponent implements OnInit {
   waterGatherQiItems$!: Observable<GatherQiItem[]>;
   woodGatherQiItems$!: Observable<GatherQiItem[]>;
 
+  //image url
   gatherQiImgSrcUrl = `${environment.imageUrl}/gather-qi-items`;
   gatherQiButtonImgSrc = `${this.gatherQiImgSrcUrl}/none.webp`
   elementImgSrcUrl = `${environment.imageUrl}/elements`;
-  
-  isSpiritSoil!: boolean;
-  isQiCushion!: boolean;
-  spiritSoilCtrl!: FormControl;
-  qiCushionCtrl!: FormControl;
 
   constructor(
     private gatherQiItemsService: GatherQiItemsService,
@@ -76,6 +98,8 @@ export class CultivationRoomComponent implements OnInit {
     this.initObservables();
     this.gatherQiItemsService.getGatherQiItemsFromServer();
     this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+    this.elements = this.getElementsOnCushion();
+    this.elementsStrength = this.getElementsStrengthOnCushion();
   }
 
   initForm() {
@@ -174,6 +198,63 @@ export class CultivationRoomComponent implements OnInit {
     return gatherQi;
   }
 
+  getElementsOnCushion(): {earthEmit: number, fireEmit: number, metalEmit: number, waterEmit: number, woodEmit: number} {
+    let elements = {earthEmit: 0, fireEmit: 0, metalEmit: 0, waterEmit: 0, woodEmit: 0};
+    if(this.tiles) {
+      this.tiles.forEach(tile => {
+        const x = tile.coordinates.x;
+        const y = tile.coordinates.y;
+        const distance = this.getDistanceFromCushion(x, y);
+        if(tile.item.id) {
+          switch (tile.item.element.name.toLowerCase()) {
+            case 'earth':
+              elements.earthEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'fire':
+              elements.fireEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'metal':
+              elements.metalEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'water':
+              elements.waterEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'wood':
+              elements.woodEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+          }
+        }
+      })
+    }
+    return elements;
+  }
+
+  getElementEmitOnCushion(distance: number, item: GatherQiItem): number {
+    let elementEmit = 0;
+    if(distance <= item.elementEmit.range - 1) {
+      elementEmit = item.elementEmit.power * item.elementEmit.decay**(Math.max(0, distance - item.elementEmit.startDecay))
+    }
+    return elementEmit;
+  }
+
+  getElementsStrengthOnCushion(): {earthStrength: number, fireStrength: number, metalStrength: number, waterStrength: number, woodStrength: number} {
+    let elementsStrength = {earthStrength: 0, fireStrength: 0, metalStrength: 0, waterStrength: 0, woodStrength: 0};
+    let totalElements = this.elements.earthEmit + this.elements.fireEmit + this.elements.metalEmit + this.elements.waterEmit + this.elements.woodEmit;
+    if(totalElements > 0) {
+      let earthEmitRatio = this.elements.earthEmit / totalElements;
+      let fireEmitRatio = this.elements.fireEmit / totalElements;
+      let metalEmitRatio = this.elements.metalEmit / totalElements;
+      let waterEmitRatio = this.elements.waterEmit / totalElements;
+      let woodEmitRatio = this.elements.woodEmit / totalElements;
+      elementsStrength.earthStrength = 2 * (fireEmitRatio - woodEmitRatio) + earthEmitRatio;
+      elementsStrength.fireStrength = 2 * (woodEmitRatio - waterEmitRatio) + fireEmitRatio;
+      elementsStrength.metalStrength = 2 * (earthEmitRatio - fireEmitRatio) + metalEmitRatio;
+      elementsStrength.waterStrength = 2 * (metalEmitRatio - earthEmitRatio) + waterEmitRatio;
+      elementsStrength.woodStrength = 2 * (waterEmitRatio - metalEmitRatio) - woodEmitRatio;
+    }
+    return elementsStrength;
+  }
+
   getDistanceFromCushion(x: number, y: number): number {
     return Math.sqrt(x**2 + y**2);
   }
@@ -188,6 +269,8 @@ export class CultivationRoomComponent implements OnInit {
       const btnElement = (<HTMLElement>this.el.nativeElement).querySelector(`.tile-${tileId}`);
       this.renderer.setStyle(btnElement, 'background-image', `url("${this.gatherQiImgSrcUrl}/${this.currentItem.image}")`);
       this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+      this.elements = this.getElementsOnCushion();
+      this.elementsStrength = this.getElementsStrengthOnCushion();
     }
   }
 

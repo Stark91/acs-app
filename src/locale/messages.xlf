@@ -140,6 +140,41 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="earthEmitButtonTooltip" datatype="html">
+        <source>Earth element strength</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fireEmitButtonTooltip" datatype="html">
+        <source>Fire element strength</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="matelEmitButtonTooltip" datatype="html">
+        <source>Metal element strength</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="waterEmitButtonTooltip" datatype="html">
+        <source>Water element strength</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="woodEmitButtonTooltip" datatype="html">
+        <source>Wood element strength</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">
         <source>Enter factors to get an estimated total golden core score.</source>
         <context-group purpose="location">

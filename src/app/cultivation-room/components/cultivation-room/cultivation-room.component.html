@@ -29,12 +29,19 @@
                 </mat-grid-list>
                 <button mat-flat-button color="warn" (click)="clearGrid()">{{ clearGridButtonLabel }}</button>
                 <button mat-flat-button color="warn">{{ totalGatherQiOnCushionButtonLabel }} {{ totalGatherQiOnCushion.toFixed(2) }} </button>
+                <div>
+                    <button mat-fab color="warn" [matTooltip]="earthEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/earth.webp" /> {{ elementsStrength.earthStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="fireEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/fire.webp" /> {{ elementsStrength.fireStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="metalEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/metal.webp" /> {{ elementsStrength.metalStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="waterEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/water.webp" /> {{ elementsStrength.waterStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="woodEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/wood.webp" /> {{ elementsStrength.woodStrength.toFixed(2) }}</button>
+                </div>
             </div>
             <mat-accordion>
                 <mat-expansion-panel *ngIf="earthGatherQiItems$ | async as gatherQiItems" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ earthLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/earth.webp" /></span>
+                            <span>{{ earthLabel }} <img class="icon" src="{{elementImgSrcUrl}}/earth.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -49,7 +56,7 @@
                 <mat-expansion-panel *ngIf="fireGatherQiItems$ | async as gatherQiItems" [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ fireLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/fire.webp" /></span>
+                            <span>{{ fireLabel }} <img class="icon" src="{{elementImgSrcUrl}}/fire.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -64,7 +71,7 @@
                 <mat-expansion-panel *ngIf="metalGatherQiItems$ | async as gatherQiItems" [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ metalLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/metal.webp" /></span>
+                            <span>{{ metalLabel }} <img class="icon" src="{{elementImgSrcUrl}}/metal.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -79,7 +86,7 @@
                 <mat-expansion-panel *ngIf="noneGatherQiItems$ | async as gatherQiItems" [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ noneLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/none.webp" /></span>
+                            <span>{{ noneLabel }} <img class="icon" src="{{elementImgSrcUrl}}/none.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -94,7 +101,7 @@
                 <mat-expansion-panel *ngIf="waterGatherQiItems$ | async as gatherQiItems" [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ waterLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/water.webp" /></span>
+                            <span>{{ waterLabel }} <img class="icon" src="{{elementImgSrcUrl}}/water.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -109,7 +116,7 @@
                 <mat-expansion-panel *ngIf="woodGatherQiItems$ | async as gatherQiItems" [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ woodLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/wood.webp" /></span>
+                            <span>{{ woodLabel }} <img class="icon" src="{{elementImgSrcUrl}}/wood.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
