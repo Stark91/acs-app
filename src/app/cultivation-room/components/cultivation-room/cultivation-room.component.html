@@ -4,15 +4,22 @@
     </mat-card-header>
     <mat-card-content>
         <div class="text">{{ cultivationRoomDescription }}</div>
+        <mat-spinner *ngIf="(loadingGatherQiItems$ | async) || (loadingTerrains$ | async) || (loadingFloorings$ | async)"></mat-spinner>
         <div class="container">
             <div class="form">
+                <mat-checkbox [matTooltip]="qiCushionCtrlTooltip" matTooltipPosition="left" [formControl]="qiCushionCtrl">{{ qiCushionCtrlLabel }}</mat-checkbox>
                 <mat-form-field>
                     <mat-label>{{ terrainsSelectLabel }}</mat-label>
-                    <mat-select *ngIf="terrains$ | async as terrains" [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="above" [formControl]="terrainCtrl">
+                    <mat-select *ngIf="terrains$ | async as terrains" [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="left" [formControl]="terrainCtrl">
                         <mat-option *ngFor="let terrain of terrains" [value]="terrain">{{ terrain.name }}</mat-option>
                     </mat-select>
                 </mat-form-field>
-                <mat-checkbox [matTooltip]="qiCushionCtrlTooltip" matTooltipPosition="right" [formControl]="qiCushionCtrl">{{ qiCushionCtrlLabel }}</mat-checkbox>
+                <mat-form-field>
+                    <mat-label>{{ flooringsSelectLabel }}</mat-label>
+                    <mat-select *ngIf="floorings$ | async as floorings" [matTooltip]="flooringCtrlTooltip" matTooltipPosition="left" [formControl]="flooringCtrl">
+                        <mat-option *ngFor="let flooring of floorings" [value]="flooring"><img class="icon" src="{{elementImgSrcUrl}}/{{flooring.element.image}}" /> {{ flooring.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
                 <mat-form-field>
                     <mat-label>{{ sizeCtrlLabel }}</mat-label>
                     <mat-select [formControl]="sizeCtrl">

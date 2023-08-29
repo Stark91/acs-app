@@ -214,6 +214,23 @@
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
+      </trans-unit>
+      <trans-unit id="flooringsSelectLabel" datatype="html">
+        <source>Flooring materials</source>
+        <target>Matériaux de revêtement de sol</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flooringCtrlTooltip" datatype="html">
+        <source>Flooring range is only 1, so the only flooring that impacts the element factor is the cushion tile flooring. If you put a flooring on spirit soil, the Qi bonus will be canceled.</source>
+        <target>La distance d'effet des revêtements de sol n'est que de 1, donc le seul revêtement de sol qui a un impact sur le facteur élément est le revêtement de sol de la tuile du coussin. Si vous posez un revêtement de sol sur de la terre spirituelle, le bonus de Qi sera annulé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">
         <source>Enter factors to get an estimated total golden core breakthrough score.</source>
         <target>Entrer les facteurs pour obtenir une valeur approximative de votre score total de percée du Noyau doré</target>

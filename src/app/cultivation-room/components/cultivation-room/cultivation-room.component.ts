@@ -6,6 +6,8 @@ import { environment } from 'src/app/core/environment/environment';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Terrain } from '../../models/terrain.model';
 import { TerrainsService } from '../../services/terrain.service';
+import { Flooring } from '../../models/flooring.model';
+import { FlooringsService } from '../../services/flooring.service';
 
 @Component({
   selector: 'acs-cultivation-room',
@@ -37,7 +39,9 @@ export class CultivationRoomComponent implements OnInit {
   woodEmitButtonTooltip = $localize`:@@woodEmitButtonTooltip:Wood element strength`;
   terrainsSelectLabel = $localize`:@@terrainsSelectLabel:Terrains`;
   elementStrengthDescription = $localize`:@@elementStrengthDescription:You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.`;
-  
+  flooringsSelectLabel = $localize`:@@flooringsSelectLabel:Flooring materials`;
+  flooringCtrlTooltip = $localize`:@@flooringCtrlTooltip:Flooring range is only 1, so the only flooring that impacts the element factor is the cushion tile flooring. If you put a flooring on spirit soil, the Qi bonus will be canceled.`;
+
   //expansion panels
   step = -1;
 
@@ -75,6 +79,8 @@ export class CultivationRoomComponent implements OnInit {
     waterStrength: number,
     woodStrength: number
   }
+  flooringCtrl!: FormControl;
+  currentFlooring!: Flooring;
 
   //observables
   loadingGatherQiItems$!: Observable<boolean>;
@@ -86,6 +92,8 @@ export class CultivationRoomComponent implements OnInit {
   woodGatherQiItems$!: Observable<GatherQiItem[]>;
   loadingTerrains$!: Observable<boolean>;
   terrains$!: Observable<Terrain[]>;
+  loadingFloorings$!: Observable<boolean>;
+  floorings$!: Observable<Flooring[]>;
 
   //image url
   gatherQiImgSrcUrl = `${environment.imageUrl}/gather-qi-items`;
@@ -96,6 +104,7 @@ export class CultivationRoomComponent implements OnInit {
   constructor(
     private gatherQiItemsService: GatherQiItemsService,
     private terrainsService: TerrainsService,
+    private flooringsService: FlooringsService,
     private renderer: Renderer2,
     private el: ElementRef,
     private formBuilder: FormBuilder
@@ -107,6 +116,7 @@ export class CultivationRoomComponent implements OnInit {
     this.initObservables();
     this.gatherQiItemsService.getGatherQiItemsFromServer();
     this.terrainsService.getTerrainsFromServer();
+    this.flooringsService.getFlooringsFromServer();
     this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
     this.elements = this.getElementsOnCushion();
     this.elementsStrength = this.getElementsStrengthOnCushion();
@@ -115,6 +125,7 @@ export class CultivationRoomComponent implements OnInit {
   initForm() {
     this.sizeCtrl = this.formBuilder.control('7');
     this.terrainCtrl = this.formBuilder.control('');
+    this.flooringCtrl = this.formBuilder.control('');
     this.qiCushionCtrl = this.formBuilder.control(false);
 
     this.sizeCtrl.valueChanges.pipe(
@@ -131,6 +142,16 @@ export class CultivationRoomComponent implements OnInit {
       map(terrain => {
         this.isSpiritSoil = terrain.name ? terrain.name.toLowerCase() === 'spirit soil' : false;
         this.currentTerrain = terrain;
+        this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        this.elements = this.getElementsOnCushion();
+        this.elementsStrength = this.getElementsStrengthOnCushion();
+      })
+    ).subscribe();
+    this.flooringCtrl.valueChanges.pipe(
+      startWith(this.flooringCtrl.value),
+      map(flooring => {
+        this.isSpiritSoil = flooring.name ? flooring.name.toLowerCase() === 'no flooring' : false;
+        this.currentFlooring = flooring;
         this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
         this.elements = this.getElementsOnCushion();
         this.elementsStrength = this.getElementsStrengthOnCushion();
@@ -156,6 +177,7 @@ export class CultivationRoomComponent implements OnInit {
   initObservables() {
     this.loadingGatherQiItems$ = this.gatherQiItemsService.loading$;
     this.loadingTerrains$ = this.terrainsService.loading$;
+    this.loadingFloorings$ = this.flooringsService.loading$;
 
     this.earthGatherQiItems$ = this.gatherQiItemsService.gatherQiItems$.pipe(
       map(items => items.filter(item => item.element.name.toLowerCase() === 'earth'))
@@ -182,6 +204,7 @@ export class CultivationRoomComponent implements OnInit {
     );
 
     this.terrains$ = this.terrainsService.terrains$;
+    this.floorings$ = this.flooringsService.floorings$;
   }
 
   initTiles() {
@@ -224,6 +247,27 @@ export class CultivationRoomComponent implements OnInit {
 
   getElementsOnCushion(): {earthEmit: number, fireEmit: number, metalEmit: number, waterEmit: number, woodEmit: number} {
     let elements = this.currentTerrain ? {earthEmit: this.currentTerrain.elementComposition.earth, fireEmit: this.currentTerrain.elementComposition.fire, metalEmit: this.currentTerrain.elementComposition.metal, waterEmit: this.currentTerrain.elementComposition.water, woodEmit: this.currentTerrain.elementComposition.wood} : {earthEmit: 0, fireEmit: 0, metalEmit: 0, waterEmit: 0, woodEmit: 0};
+    if(this.currentFlooring) {
+      switch (this.currentFlooring.element.name.toLowerCase()) {
+        case "earth":
+          elements.earthEmit += this.currentFlooring.elementEmit;
+          break;
+        case "fire":
+          elements.fireEmit += this.currentFlooring.elementEmit;
+          break;
+        case "metal":
+          elements.metalEmit += this.currentFlooring.elementEmit;
+          break;
+        case "water":
+          elements.waterEmit += this.currentFlooring.elementEmit;
+          break;
+        case "wood":
+          elements.woodEmit += this.currentFlooring.elementEmit;
+          break;
+        default:
+          break;
+      }
+    }
     if(this.tiles) {
       this.tiles.forEach(tile => {
         const x = tile.coordinates.x;

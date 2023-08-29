@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CultivationRoomComponent } from './components/cultivation-room/cultivation-room.component';
 import { GatherQiItemsService } from './services/gatherQiItem.service';
 import { TerrainsService } from './services/terrain.service';
+import { FlooringsService } from './services/flooring.service';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TerrainsService } from './services/terrain.service';
     SharedModule
   ],
   providers: [
+    FlooringsService,
     GatherQiItemsService,
     TerrainsService
   ]

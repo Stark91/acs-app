@@ -2948,5 +2948,143 @@
                 "wood": 0
             }
         }
+    ],
+    "floorings": [
+        {
+            "name": "No Flooring",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "elementEmit": 0
+        },
+        {
+            "name": "Brownstone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Graystone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Marble",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Jade",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Holy Stone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Carpet",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Wood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Goldwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Spiritwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Phoenixwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Bamboo Stalk",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 5
+        },
+        {
+            "name": "Iron Ore",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Darksteel Ore",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Lumina Core",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 5
+        },
+        {
+            "name": "Igneocopper Ore",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Ice Crystal Ore",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "elementEmit": 2
+        }
     ]
 }
