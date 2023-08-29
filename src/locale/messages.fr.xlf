@@ -379,8 +379,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tileElementInputTooltip" datatype="html">
-        <source>Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).</source>
-        <target>Le bonus max est de 1.5 et est équivalent à +++++ en jeu (il dépend du sol, du revêtement de sol, des émetteurs d'éléments et de la météo).</target>
+        <source>Max bonus is 1.85+ and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).</source>
+        <target>Le bonus max est de 1.85+ et est équivalent à +++++ en jeu (il dépend du sol, du revêtement de sol, des émetteurs d'éléments et de la météo).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
           <context context-type="linenumber">35</context>
