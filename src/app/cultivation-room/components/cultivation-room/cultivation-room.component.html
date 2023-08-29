@@ -6,7 +6,12 @@
         <div class="text">{{ cultivationRoomDescription }}</div>
         <div class="container">
             <div class="form">
-                <mat-checkbox [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="right" [formControl]="spiritSoilCtrl">{{ spiritSoilCtrlLabel }}</mat-checkbox>
+                <mat-form-field>
+                    <mat-label>{{ terrainsSelectLabel }}</mat-label>
+                    <mat-select *ngIf="terrains$ | async as terrains" [formControl]="terrainCtrl">
+                        <mat-option *ngFor="let terrain of terrains" [value]="terrain">{{ terrain.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
                 <mat-checkbox [matTooltip]="qiCushionCtrlTooltip" matTooltipPosition="right" [formControl]="qiCushionCtrl">{{ qiCushionCtrlLabel }}</mat-checkbox>
                 <mat-form-field>
                     <mat-label>{{ sizeCtrlLabel }}</mat-label>
@@ -25,10 +30,14 @@
                         <ng-container *ngIf="tile.id !== cushionTile">
                             <button class="tile-{{tile.id}} tile-button" mat-icon-button (click)="setTileCurrentItem(tile.id)"></button>
                         </ng-container>
+                        <ng-container *ngIf="tile.id === cushionTile">
+                            <button class="tile-cushion" mat-icon-button></button>
+                        </ng-container>
                     </mat-grid-tile>
                 </mat-grid-list>
                 <button mat-flat-button color="warn" (click)="clearGrid()">{{ clearGridButtonLabel }}</button>
                 <button mat-flat-button color="warn">{{ totalGatherQiOnCushionButtonLabel }} {{ totalGatherQiOnCushion.toFixed(2) }} </button>
+                <div class="text">{{ elementStrengthDescription }}</div>
                 <div>
                     <button mat-fab color="warn" [matTooltip]="earthEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/earth.webp" /> {{ elementsStrength.earthStrength.toFixed(2) }}</button>
                     <button mat-fab color="warn" [matTooltip]="fireEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/fire.webp" /> {{ elementsStrength.fireStrength.toFixed(2) }}</button>

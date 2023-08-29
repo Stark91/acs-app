@@ -4,6 +4,8 @@ import { GatherQiItemsService } from '../../services/gatherQiItem.service';
 import { GatherQiItem } from '../../models/gatherQiItem.model';
 import { environment } from 'src/app/core/environment/environment';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Terrain } from '../../models/terrain.model';
+import { TerrainsService } from '../../services/terrain.service';
 
 @Component({
   selector: 'acs-cultivation-room',
@@ -33,6 +35,8 @@ export class CultivationRoomComponent implements OnInit {
   metalEmitButtonTooltip = $localize`:@@matelEmitButtonTooltip:Metal element strength`;
   waterEmitButtonTooltip = $localize`:@@waterEmitButtonTooltip:Water element strength`;
   woodEmitButtonTooltip = $localize`:@@woodEmitButtonTooltip:Wood element strength`;
+  terrainsSelectLabel = $localize`:@@terrainsSelectLabel:Terrains`;
+  elementStrengthDescription = $localize`:@@elementStrengthDescription:You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.`;
   
   //expansion panels
   step = -1;
@@ -54,7 +58,8 @@ export class CultivationRoomComponent implements OnInit {
   currentItem!: GatherQiItem;
   isSpiritSoil!: boolean;
   isQiCushion!: boolean;
-  spiritSoilCtrl!: FormControl;
+  terrainCtrl!: FormControl;
+  currentTerrain!: Terrain;
   qiCushionCtrl!: FormControl;
   elements!: {
     earthEmit: number,
@@ -79,14 +84,18 @@ export class CultivationRoomComponent implements OnInit {
   noneGatherQiItems$!: Observable<GatherQiItem[]>;
   waterGatherQiItems$!: Observable<GatherQiItem[]>;
   woodGatherQiItems$!: Observable<GatherQiItem[]>;
+  loadingTerrains$!: Observable<boolean>;
+  terrains$!: Observable<Terrain[]>;
 
   //image url
   gatherQiImgSrcUrl = `${environment.imageUrl}/gather-qi-items`;
   gatherQiButtonImgSrc = `${this.gatherQiImgSrcUrl}/none.webp`
   elementImgSrcUrl = `${environment.imageUrl}/elements`;
+  cushionImgSrcUrl = `${environment.imageUrl}/cushions`;
 
   constructor(
     private gatherQiItemsService: GatherQiItemsService,
+    private terrainsService: TerrainsService,
     private renderer: Renderer2,
     private el: ElementRef,
     private formBuilder: FormBuilder
@@ -97,6 +106,7 @@ export class CultivationRoomComponent implements OnInit {
     this.initTiles();
     this.initObservables();
     this.gatherQiItemsService.getGatherQiItemsFromServer();
+    this.terrainsService.getTerrainsFromServer();
     this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
     this.elements = this.getElementsOnCushion();
     this.elementsStrength = this.getElementsStrengthOnCushion();
@@ -104,7 +114,7 @@ export class CultivationRoomComponent implements OnInit {
 
   initForm() {
     this.sizeCtrl = this.formBuilder.control('7');
-    this.spiritSoilCtrl = this.formBuilder.control(false);
+    this.terrainCtrl = this.formBuilder.control('');
     this.qiCushionCtrl = this.formBuilder.control(false);
 
     this.sizeCtrl.valueChanges.pipe(
@@ -116,11 +126,14 @@ export class CultivationRoomComponent implements OnInit {
         this.initTiles();
       })
     ).subscribe();
-    this.spiritSoilCtrl.valueChanges.pipe(
-      startWith(this.spiritSoilCtrl.value),
-      map(value => {
-        this.isSpiritSoil = value;
+    this.terrainCtrl.valueChanges.pipe(
+      startWith(this.terrainCtrl.value),
+      map(terrain => {
+        this.isSpiritSoil = terrain.name ? terrain.name.toLowerCase() === 'spirit soil' : false;
+        this.currentTerrain = terrain;
         this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        this.elements = this.getElementsOnCushion();
+        this.elementsStrength = this.getElementsStrengthOnCushion();
       })
     ).subscribe();
     this.qiCushionCtrl.valueChanges.pipe(
@@ -128,12 +141,21 @@ export class CultivationRoomComponent implements OnInit {
       map(value => {
         this.isQiCushion = value;
         this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        const btnElement = (<HTMLElement>this.el.nativeElement).querySelector(`.tile-cushion`);
+        if(btnElement) {
+          if(value) {
+            this.renderer.setStyle(btnElement, 'background-image', `url("${this.cushionImgSrcUrl}/qi-cushion.webp")`);
+          } else {
+            this.renderer.setStyle(btnElement, 'background-image', `url("${this.cushionImgSrcUrl}/cushion.webp")`);
+          }
+        }
       })
     ).subscribe();
   }
 
   initObservables() {
     this.loadingGatherQiItems$ = this.gatherQiItemsService.loading$;
+    this.loadingTerrains$ = this.terrainsService.loading$;
 
     this.earthGatherQiItems$ = this.gatherQiItemsService.gatherQiItems$.pipe(
       map(items => items.filter(item => item.element.name.toLowerCase() === 'earth'))
@@ -158,6 +180,8 @@ export class CultivationRoomComponent implements OnInit {
     this.woodGatherQiItems$ = this.gatherQiItemsService.gatherQiItems$.pipe(
       map(items => items.filter(item => item.element.name.toLowerCase() === 'wood'))
     );
+
+    this.terrains$ = this.terrainsService.terrains$;
   }
 
   initTiles() {
@@ -199,7 +223,7 @@ export class CultivationRoomComponent implements OnInit {
   }
 
   getElementsOnCushion(): {earthEmit: number, fireEmit: number, metalEmit: number, waterEmit: number, woodEmit: number} {
-    let elements = {earthEmit: 0, fireEmit: 0, metalEmit: 0, waterEmit: 0, woodEmit: 0};
+    let elements = this.currentTerrain ? {earthEmit: this.currentTerrain.elementComposition.earth, fireEmit: this.currentTerrain.elementComposition.fire, metalEmit: this.currentTerrain.elementComposition.metal, waterEmit: this.currentTerrain.elementComposition.water, woodEmit: this.currentTerrain.elementComposition.wood} : {earthEmit: 0, fireEmit: 0, metalEmit: 0, waterEmit: 0, woodEmit: 0};
     if(this.tiles) {
       this.tiles.forEach(tile => {
         const x = tile.coordinates.x;
@@ -250,7 +274,7 @@ export class CultivationRoomComponent implements OnInit {
       elementsStrength.fireStrength = 2 * (woodEmitRatio - waterEmitRatio) + fireEmitRatio;
       elementsStrength.metalStrength = 2 * (earthEmitRatio - fireEmitRatio) + metalEmitRatio;
       elementsStrength.waterStrength = 2 * (metalEmitRatio - earthEmitRatio) + waterEmitRatio;
-      elementsStrength.woodStrength = 2 * (waterEmitRatio - metalEmitRatio) - woodEmitRatio;
+      elementsStrength.woodStrength = 2 * (waterEmitRatio - metalEmitRatio) + woodEmitRatio;
     }
     return elementsStrength;
   }

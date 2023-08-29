@@ -10,7 +10,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="goldenCore" datatype="html">
@@ -42,98 +42,98 @@
         <source>Select Gather Qi items by clicking on tiles to simulate cultivation room and get Qi amount on the breakthrough tile (center).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="spiritSoilCtrlTooltip" datatype="html">
         <source>Spirit soil add 40 Qi on the tile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="spiritSoilCtrlLabel" datatype="html">
         <source>Cushion on spirit soil</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="qiCushionCtrlTooltip" datatype="html">
         <source>Qi Cushion add 60 Qi on the tile</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="qiCushionCtrlLabel" datatype="html">
         <source>Cushion is Qi Cushion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sizeCtrlLabel" datatype="html">
         <source>Size</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="clearGridButtonLabel" datatype="html">
         <source>Clear grid</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="totalGatherQiOnCushionButtonLabel" datatype="html">
         <source>Gathered Qi on cushion</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="earth" datatype="html">
         <source>Earth</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fire" datatype="html">
         <source>Fire</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="metal" datatype="html">
         <source>Metal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="none" datatype="html">
         <source>None</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">28</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="water" datatype="html">
         <source>Water</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="wood" datatype="html">
         <source>Wood</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/policy-events/components/policy-event/policy-event.component.ts</context>
@@ -144,35 +144,49 @@
         <source>Earth element strength</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="fireEmitButtonTooltip" datatype="html">
         <source>Fire element strength</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">32</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="matelEmitButtonTooltip" datatype="html">
         <source>Metal element strength</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="waterEmitButtonTooltip" datatype="html">
         <source>Water element strength</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="woodEmitButtonTooltip" datatype="html">
         <source>Wood element strength</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terrainsSelectLabel" datatype="html">
+        <source>Terrains</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="elementStrengthDescription" datatype="html">
+        <source>You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">

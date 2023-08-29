@@ -198,6 +198,22 @@
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="terrainsSelectLabel" datatype="html">
+        <source>Terrains</source>
+        <target>Terrains</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="elementStrengthDescription" datatype="html">
+        <source>You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.</source>
+        <target>Vous devez avoir une force d'élément supérieure à 1,85 pour l'élément qui engendre votre loi d'élément. La force des éléments n’a pas d’importance pour les cultivateurs du Néant.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">
         <source>Enter factors to get an estimated total golden core breakthrough score.</source>
         <target>Entrer les facteurs pour obtenir une valeur approximative de votre score total de percée du Noyau doré</target>

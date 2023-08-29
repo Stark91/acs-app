@@ -32,6 +32,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .tile-button {
@@ -40,6 +41,14 @@ button {
     background-position: center;
     border: 1px solid black;
     border-radius: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.tile-cushion {
+    background-image: url("http://localhost:4200/assets/images/cushions/cushion.webp");
+    background-repeat: no-repeat;
+    background-position: center;
     height: 20px;
     width: 20px;
 }

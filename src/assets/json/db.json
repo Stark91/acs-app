@@ -2836,5 +2836,117 @@
                 "image": "none.webp"
             }
         }
+    ],
+    "terrains": [
+        {
+            "name": "Soil",
+            "elementComposition": {
+                "earth": 2,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Sand",
+            "elementComposition": {
+                "earth": 2,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Mud",
+            "elementComposition": {
+                "earth": 1.5,
+                "fire": 0,
+                "metal": 0,
+                "water": 1.5,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Wet Earth",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 1.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Fertile Soil",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 1
+            }
+        },
+        {
+            "name": "Spirit Soil",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Rocky Terrain",
+            "elementComposition": {
+                "earth": 0.25,
+                "fire": 0,
+                "metal": 1,
+                "water": 0,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Sand",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Shallow Water",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Thin Blood",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Spirit Water",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        }
     ]
 }
