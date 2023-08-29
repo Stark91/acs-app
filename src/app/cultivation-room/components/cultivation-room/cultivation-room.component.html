@@ -8,7 +8,7 @@
             <div class="form">
                 <mat-form-field>
                     <mat-label>{{ terrainsSelectLabel }}</mat-label>
-                    <mat-select *ngIf="terrains$ | async as terrains" [formControl]="terrainCtrl">
+                    <mat-select *ngIf="terrains$ | async as terrains" [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="above" [formControl]="terrainCtrl">
                         <mat-option *ngFor="let terrain of terrains" [value]="terrain">{{ terrain.name }}</mat-option>
                     </mat-select>
                 </mat-form-field>
