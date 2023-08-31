@@ -4,10 +4,22 @@
     </mat-card-header>
     <mat-card-content>
         <div class="text">{{ cultivationRoomDescription }}</div>
+        <mat-spinner *ngIf="(loadingGatherQiItems$ | async) || (loadingTerrains$ | async) || (loadingFloorings$ | async)"></mat-spinner>
         <div class="container">
             <div class="form">
-                <mat-checkbox [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="right" [formControl]="spiritSoilCtrl">{{ spiritSoilCtrlLabel }}</mat-checkbox>
-                <mat-checkbox [matTooltip]="qiCushionCtrlTooltip" matTooltipPosition="right" [formControl]="qiCushionCtrl">{{ qiCushionCtrlLabel }}</mat-checkbox>
+                <mat-checkbox [matTooltip]="qiCushionCtrlTooltip" matTooltipPosition="left" [formControl]="qiCushionCtrl">{{ qiCushionCtrlLabel }}</mat-checkbox>
+                <mat-form-field>
+                    <mat-label>{{ terrainsSelectLabel }}</mat-label>
+                    <mat-select *ngIf="terrains$ | async as terrains" [matTooltip]="spiritSoilCtrlTooltip" matTooltipPosition="left" [formControl]="terrainCtrl">
+                        <mat-option *ngFor="let terrain of terrains" [value]="terrain">{{ terrain.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>{{ flooringsSelectLabel }}</mat-label>
+                    <mat-select *ngIf="floorings$ | async as floorings" [matTooltip]="flooringCtrlTooltip" matTooltipPosition="left" [formControl]="flooringCtrl">
+                        <mat-option *ngFor="let flooring of floorings" [value]="flooring"><img class="icon" src="{{elementImgSrcUrl}}/{{flooring.element.image}}" /> {{ flooring.name }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
                 <mat-form-field>
                     <mat-label>{{ sizeCtrlLabel }}</mat-label>
                     <mat-select [formControl]="sizeCtrl">
@@ -25,16 +37,27 @@
                         <ng-container *ngIf="tile.id !== cushionTile">
                             <button class="tile-{{tile.id}} tile-button" mat-icon-button (click)="setTileCurrentItem(tile.id)"></button>
                         </ng-container>
+                        <ng-container *ngIf="tile.id === cushionTile">
+                            <button class="tile-cushion" mat-icon-button></button>
+                        </ng-container>
                     </mat-grid-tile>
                 </mat-grid-list>
                 <button mat-flat-button color="warn" (click)="clearGrid()">{{ clearGridButtonLabel }}</button>
                 <button mat-flat-button color="warn">{{ totalGatherQiOnCushionButtonLabel }} {{ totalGatherQiOnCushion.toFixed(2) }} </button>
+                <div class="text">{{ elementStrengthDescription }}</div>
+                <div>
+                    <button mat-fab color="warn" [matTooltip]="earthEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/earth.webp" /> {{ elementsStrength.earthStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="fireEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/fire.webp" /> {{ elementsStrength.fireStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="metalEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/metal.webp" /> {{ elementsStrength.metalStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="waterEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/water.webp" /> {{ elementsStrength.waterStrength.toFixed(2) }}</button>
+                    <button mat-fab color="warn" [matTooltip]="woodEmitButtonTooltip" matTooltipPosition="below"><img class="icon" src="{{elementImgSrcUrl}}/wood.webp" /> {{ elementsStrength.woodStrength.toFixed(2) }}</button>
+                </div>
             </div>
             <mat-accordion>
                 <mat-expansion-panel *ngIf="earthGatherQiItems$ | async as gatherQiItems" [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ earthLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/earth.webp" /></span>
+                            <span>{{ earthLabel }} <img class="icon" src="{{elementImgSrcUrl}}/earth.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -49,7 +72,7 @@
                 <mat-expansion-panel *ngIf="fireGatherQiItems$ | async as gatherQiItems" [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ fireLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/fire.webp" /></span>
+                            <span>{{ fireLabel }} <img class="icon" src="{{elementImgSrcUrl}}/fire.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -64,7 +87,7 @@
                 <mat-expansion-panel *ngIf="metalGatherQiItems$ | async as gatherQiItems" [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ metalLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/metal.webp" /></span>
+                            <span>{{ metalLabel }} <img class="icon" src="{{elementImgSrcUrl}}/metal.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -79,7 +102,7 @@
                 <mat-expansion-panel *ngIf="noneGatherQiItems$ | async as gatherQiItems" [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ noneLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/none.webp" /></span>
+                            <span>{{ noneLabel }} <img class="icon" src="{{elementImgSrcUrl}}/none.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -94,7 +117,7 @@
                 <mat-expansion-panel *ngIf="waterGatherQiItems$ | async as gatherQiItems" [expanded]="step === 4" (opened)="setStep(4)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ waterLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/water.webp" /></span>
+                            <span>{{ waterLabel }} <img class="icon" src="{{elementImgSrcUrl}}/water.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>
@@ -109,7 +132,7 @@
                 <mat-expansion-panel *ngIf="woodGatherQiItems$ | async as gatherQiItems" [expanded]="step === 5" (opened)="setStep(5)" hideToggle>
                     <mat-expansion-panel-header>
                         <mat-panel-title>
-                            <span>{{ woodLabel }} <img style="vertical-align: middle;" src="{{elementImgSrcUrl}}/wood.webp" /></span>
+                            <span>{{ woodLabel }} <img class="icon" src="{{elementImgSrcUrl}}/wood.webp" /></span>
                         </mat-panel-title>
                     </mat-expansion-panel-header>
                     <mat-list>

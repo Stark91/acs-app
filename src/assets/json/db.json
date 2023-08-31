@@ -1635,6 +1635,12 @@
                 "range": 0,
                 "decay": 0,
                 "startDecay": 0
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -1648,6 +1654,12 @@
             "gatherQi": {
                 "power": 35,
                 "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 10,
+                "range": 5,
                 "decay": 0.8,
                 "startDecay": 1
             }
@@ -1665,6 +1677,12 @@
                 "range": 3,
                 "decay": 0.95,
                 "startDecay": 0
+            },
+            "elementEmit": {
+                "power": 3,
+                "range": 3,
+                "decay": 0.6,
+                "startDecay": 0
             }
         },
         {
@@ -1678,6 +1696,12 @@
             "gatherQi": {
                 "power": 35,
                 "range": 3,
+                "decay": 0.8,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 8,
+                "range": 4,
                 "decay": 0.8,
                 "startDecay": 1
             }
@@ -1695,6 +1719,12 @@
                 "range": 3,
                 "decay": 0.8,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 8,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 1
             }
         },
         {
@@ -1710,6 +1740,12 @@
                 "range": 4,
                 "decay": 0.8,
                 "startDecay": 2
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -1725,6 +1761,12 @@
                 "range": 3,
                 "decay": 0.8,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 5,
+                "range": 2,
+                "decay": 1,
+                "startDecay": 1
             }
         },
         {
@@ -1738,6 +1780,12 @@
             "gatherQi": {
                 "power": 75,
                 "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
                 "decay": 0.9,
                 "startDecay": 1
             }
@@ -1755,6 +1803,12 @@
                 "range": 2,
                 "decay": 1,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 8,
+                "range": 2,
+                "decay": 0.8,
+                "startDecay": 1
             }
         },
         {
@@ -1769,6 +1823,12 @@
                 "power": 20,
                 "range": 3,
                 "decay": 0.8,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 3,
+                "range": 2,
+                "decay": 1,
                 "startDecay": 1
             }
         },
@@ -1785,6 +1845,12 @@
                 "range": 4,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -1798,6 +1864,12 @@
             "gatherQi": {
                 "power": 75,
                 "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
                 "decay": 0.9,
                 "startDecay": 1
             }
@@ -1815,6 +1887,12 @@
                 "range": 3,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 1
             }
         },
         {
@@ -1829,6 +1907,12 @@
                 "power": 200,
                 "range": 2,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -1845,6 +1929,12 @@
                 "range": 3,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -1859,6 +1949,12 @@
                 "power": 35,
                 "range": 4,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -1875,6 +1971,12 @@
                 "range": 5,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -1889,6 +1991,12 @@
                 "power": 150,
                 "range": 2,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -1905,6 +2013,12 @@
                 "range": 3,
                 "decay": 0.6,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
+                "decay": 0.8,
+                "startDecay": 2
             }
         },
         {
@@ -1920,6 +2034,12 @@
                 "range": 3,
                 "decay": 0.6,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 9,
+                "range": 5,
+                "decay": 0.8,
+                "startDecay": 2
             }
         },
         {
@@ -1933,6 +2053,12 @@
             "gatherQi": {
                 "power": 75,
                 "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
                 "decay": 0.9,
                 "startDecay": 1
             }
@@ -1950,6 +2076,12 @@
                 "range": 2,
                 "decay": 1,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 8,
+                "range": 2,
+                "decay": 0.8,
+                "startDecay": 1
             }
         },
         {
@@ -1965,6 +2097,12 @@
                 "range": 4,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -1980,6 +2118,12 @@
                 "range": 2,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -1995,6 +2139,12 @@
                 "range": 2,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -2010,6 +2160,12 @@
                 "range": 4,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -2025,6 +2181,12 @@
                 "range": 5,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 0,
+                "range": 0,
+                "decay": 0,
+                "startDecay": 0
             }
         },
         {
@@ -2039,6 +2201,12 @@
                 "power": 35,
                 "range": 4,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -2055,6 +2223,12 @@
                 "range": 3,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -2069,6 +2243,12 @@
                 "power": 200,
                 "range": 2,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -2085,6 +2265,12 @@
                 "range": 2,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -2099,6 +2285,12 @@
                 "power": 35,
                 "range": 4,
                 "decay": 0.95,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
                 "startDecay": 1
             }
         },
@@ -2115,6 +2307,12 @@
                 "range": 5,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 3,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -2130,6 +2328,12 @@
                 "range": 3,
                 "decay": 0.95,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 4,
+                "decay": 0.8,
+                "startDecay": 1
             }
         },
         {
@@ -2143,6 +2347,12 @@
             "gatherQi": {
                 "power": 75,
                 "range": 2,
+                "decay": 0.9,
+                "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
                 "decay": 0.9,
                 "startDecay": 1
             }
@@ -2160,6 +2370,12 @@
                 "range": 3,
                 "decay": 0.7,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 15,
+                "range": 4,
+                "decay": 0.7,
+                "startDecay": 1
             }
         },
         {
@@ -2175,6 +2391,12 @@
                 "range": 2,
                 "decay": 0.9,
                 "startDecay": 1
+            },
+            "elementEmit": {
+                "power": 12,
+                "range": 5,
+                "decay": 0.9,
+                "startDecay": 1
             }
         },
         {
@@ -2187,6 +2409,12 @@
             },
             "gatherQi": {
                 "power": 30,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 2
+            },
+            "elementEmit": {
+                "power": 8,
                 "range": 3,
                 "decay": 0.8,
                 "startDecay": 2
@@ -2205,6 +2433,12 @@
                 "range": 3,
                 "decay": 0.8,
                 "startDecay": 2
+            },
+            "elementEmit": {
+                "power": 8,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 2
             }
         },
         {
@@ -2220,6 +2454,12 @@
                 "range": 4,
                 "decay": 0.8,
                 "startDecay": 2
+            },
+            "elementEmit": {
+                "power": 5,
+                "range": 3,
+                "decay": 0.8,
+                "startDecay": 2
             }
         },
         {
@@ -2233,6 +2473,12 @@
             "gatherQi": {
                 "power": 15,
                 "range": 4,
+                "decay": 0.8,
+                "startDecay": 2
+            },
+            "elementEmit": {
+                "power": 5,
+                "range": 3,
                 "decay": 0.8,
                 "startDecay": 2
             }
@@ -2589,6 +2835,256 @@
                 "name": "None",
                 "image": "none.webp"
             }
+        }
+    ],
+    "terrains": [
+        {
+            "name": "Soil",
+            "elementComposition": {
+                "earth": 2,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Sand",
+            "elementComposition": {
+                "earth": 2,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Mud",
+            "elementComposition": {
+                "earth": 1.5,
+                "fire": 0,
+                "metal": 0,
+                "water": 1.5,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Wet Earth",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 1.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Fertile Soil",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 1
+            }
+        },
+        {
+            "name": "Spirit Soil",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0.5,
+                "wood": 0.5
+            }
+        },
+        {
+            "name": "Rocky Terrain",
+            "elementComposition": {
+                "earth": 0.25,
+                "fire": 0,
+                "metal": 1,
+                "water": 0,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Sand",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 0,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Shallow Water",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Thin Blood",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        },
+        {
+            "name": "Spirit Water",
+            "elementComposition": {
+                "earth": 1,
+                "fire": 0,
+                "metal": 0,
+                "water": 2,
+                "wood": 0
+            }
+        }
+    ],
+    "floorings": [
+        {
+            "name": "No Flooring",
+            "element": {
+                "name": "None",
+                "image": "none.webp"
+            },
+            "elementEmit": 0
+        },
+        {
+            "name": "Brownstone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Graystone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Marble",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Jade",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Holy Stone",
+            "element": {
+                "name": "Earth",
+                "image": "earth.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Carpet",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Wood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Goldwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Spiritwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Phoenixwood",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Bamboo Stalk",
+            "element": {
+                "name": "Wood",
+                "image": "wood.webp"
+            },
+            "elementEmit": 5
+        },
+        {
+            "name": "Iron Ore",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 1
+        },
+        {
+            "name": "Darksteel Ore",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 3
+        },
+        {
+            "name": "Lumina Core",
+            "element": {
+                "name": "Metal",
+                "image": "metal.webp"
+            },
+            "elementEmit": 5
+        },
+        {
+            "name": "Igneocopper Ore",
+            "element": {
+                "name": "Fire",
+                "image": "fire.webp"
+            },
+            "elementEmit": 2
+        },
+        {
+            "name": "Ice Crystal Ore",
+            "element": {
+                "name": "Water",
+                "image": "water.webp"
+            },
+            "elementEmit": 2
         }
     ]
 }

@@ -4,6 +4,10 @@ import { GatherQiItemsService } from '../../services/gatherQiItem.service';
 import { GatherQiItem } from '../../models/gatherQiItem.model';
 import { environment } from 'src/app/core/environment/environment';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Terrain } from '../../models/terrain.model';
+import { TerrainsService } from '../../services/terrain.service';
+import { Flooring } from '../../models/flooring.model';
+import { FlooringsService } from '../../services/flooring.service';
 
 @Component({
   selector: 'acs-cultivation-room',
@@ -28,9 +32,20 @@ export class CultivationRoomComponent implements OnInit {
   noneLabel = $localize`:@@none:None`;
   waterLabel = $localize`:@@water:Water`;
   woodLabel = $localize`:@@wood:Wood`;
-  
+  earthEmitButtonTooltip = $localize`:@@earthEmitButtonTooltip:Earth element strength`;
+  fireEmitButtonTooltip = $localize`:@@fireEmitButtonTooltip:Fire element strength`;
+  metalEmitButtonTooltip = $localize`:@@matelEmitButtonTooltip:Metal element strength`;
+  waterEmitButtonTooltip = $localize`:@@waterEmitButtonTooltip:Water element strength`;
+  woodEmitButtonTooltip = $localize`:@@woodEmitButtonTooltip:Wood element strength`;
+  terrainsSelectLabel = $localize`:@@terrainsSelectLabel:Terrains`;
+  elementStrengthDescription = $localize`:@@elementStrengthDescription:You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.`;
+  flooringsSelectLabel = $localize`:@@flooringsSelectLabel:Flooring materials`;
+  flooringCtrlTooltip = $localize`:@@flooringCtrlTooltip:Flooring range is only 1, so the only flooring that impacts the element factor is the cushion tile flooring. If you put a flooring on spirit soil, the Qi bonus will be canceled.`;
+
+  //expansion panels
   step = -1;
 
+  //grid
   size = 7;
   sizeCtrl!: FormControl;
   cushionTile = Math.trunc((this.size**2 - 1) / 2);
@@ -45,7 +60,29 @@ export class CultivationRoomComponent implements OnInit {
   }[];
   totalGatherQiOnCushion!: number;
   currentItem!: GatherQiItem;
+  isSpiritSoil!: boolean;
+  isQiCushion!: boolean;
+  terrainCtrl!: FormControl;
+  currentTerrain!: Terrain;
+  qiCushionCtrl!: FormControl;
+  elements!: {
+    earthEmit: number,
+    fireEmit: number,
+    metalEmit: number,
+    waterEmit: number,
+    woodEmit: number
+  };
+  elementsStrength!: {
+    earthStrength: number,
+    fireStrength: number,
+    metalStrength: number,
+    waterStrength: number,
+    woodStrength: number
+  }
+  flooringCtrl!: FormControl;
+  currentFlooring!: Flooring;
 
+  //observables
   loadingGatherQiItems$!: Observable<boolean>;
   earthGatherQiItems$!: Observable<GatherQiItem[]>;
   fireGatherQiItems$!: Observable<GatherQiItem[]>;
@@ -53,18 +90,21 @@ export class CultivationRoomComponent implements OnInit {
   noneGatherQiItems$!: Observable<GatherQiItem[]>;
   waterGatherQiItems$!: Observable<GatherQiItem[]>;
   woodGatherQiItems$!: Observable<GatherQiItem[]>;
+  loadingTerrains$!: Observable<boolean>;
+  terrains$!: Observable<Terrain[]>;
+  loadingFloorings$!: Observable<boolean>;
+  floorings$!: Observable<Flooring[]>;
 
+  //image url
   gatherQiImgSrcUrl = `${environment.imageUrl}/gather-qi-items`;
   gatherQiButtonImgSrc = `${this.gatherQiImgSrcUrl}/none.webp`
   elementImgSrcUrl = `${environment.imageUrl}/elements`;
-  
-  isSpiritSoil!: boolean;
-  isQiCushion!: boolean;
-  spiritSoilCtrl!: FormControl;
-  qiCushionCtrl!: FormControl;
+  cushionImgSrcUrl = `${environment.imageUrl}/cushions`;
 
   constructor(
     private gatherQiItemsService: GatherQiItemsService,
+    private terrainsService: TerrainsService,
+    private flooringsService: FlooringsService,
     private renderer: Renderer2,
     private el: ElementRef,
     private formBuilder: FormBuilder
@@ -75,12 +115,17 @@ export class CultivationRoomComponent implements OnInit {
     this.initTiles();
     this.initObservables();
     this.gatherQiItemsService.getGatherQiItemsFromServer();
+    this.terrainsService.getTerrainsFromServer();
+    this.flooringsService.getFlooringsFromServer();
     this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+    this.elements = this.getElementsOnCushion();
+    this.elementsStrength = this.getElementsStrengthOnCushion();
   }
 
   initForm() {
     this.sizeCtrl = this.formBuilder.control('7');
-    this.spiritSoilCtrl = this.formBuilder.control(false);
+    this.terrainCtrl = this.formBuilder.control('');
+    this.flooringCtrl = this.formBuilder.control('');
     this.qiCushionCtrl = this.formBuilder.control(false);
 
     this.sizeCtrl.valueChanges.pipe(
@@ -92,11 +137,24 @@ export class CultivationRoomComponent implements OnInit {
         this.initTiles();
       })
     ).subscribe();
-    this.spiritSoilCtrl.valueChanges.pipe(
-      startWith(this.spiritSoilCtrl.value),
-      map(value => {
-        this.isSpiritSoil = value;
+    this.terrainCtrl.valueChanges.pipe(
+      startWith(this.terrainCtrl.value),
+      map(terrain => {
+        this.isSpiritSoil = terrain.name ? terrain.name.toLowerCase() === 'spirit soil' : false;
+        this.currentTerrain = terrain;
         this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        this.elements = this.getElementsOnCushion();
+        this.elementsStrength = this.getElementsStrengthOnCushion();
+      })
+    ).subscribe();
+    this.flooringCtrl.valueChanges.pipe(
+      startWith(this.flooringCtrl.value),
+      map(flooring => {
+        this.isSpiritSoil = flooring.name ? flooring.name.toLowerCase() === 'no flooring' : false;
+        this.currentFlooring = flooring;
+        this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        this.elements = this.getElementsOnCushion();
+        this.elementsStrength = this.getElementsStrengthOnCushion();
       })
     ).subscribe();
     this.qiCushionCtrl.valueChanges.pipe(
@@ -104,12 +162,22 @@ export class CultivationRoomComponent implements OnInit {
       map(value => {
         this.isQiCushion = value;
         this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+        const btnElement = (<HTMLElement>this.el.nativeElement).querySelector(`.tile-cushion`);
+        if(btnElement) {
+          if(value) {
+            this.renderer.setStyle(btnElement, 'background-image', `url("${this.cushionImgSrcUrl}/qi-cushion.webp")`);
+          } else {
+            this.renderer.setStyle(btnElement, 'background-image', `url("${this.cushionImgSrcUrl}/cushion.webp")`);
+          }
+        }
       })
     ).subscribe();
   }
 
   initObservables() {
     this.loadingGatherQiItems$ = this.gatherQiItemsService.loading$;
+    this.loadingTerrains$ = this.terrainsService.loading$;
+    this.loadingFloorings$ = this.flooringsService.loading$;
 
     this.earthGatherQiItems$ = this.gatherQiItemsService.gatherQiItems$.pipe(
       map(items => items.filter(item => item.element.name.toLowerCase() === 'earth'))
@@ -134,6 +202,9 @@ export class CultivationRoomComponent implements OnInit {
     this.woodGatherQiItems$ = this.gatherQiItemsService.gatherQiItems$.pipe(
       map(items => items.filter(item => item.element.name.toLowerCase() === 'wood'))
     );
+
+    this.terrains$ = this.terrainsService.terrains$;
+    this.floorings$ = this.flooringsService.floorings$;
   }
 
   initTiles() {
@@ -174,6 +245,84 @@ export class CultivationRoomComponent implements OnInit {
     return gatherQi;
   }
 
+  getElementsOnCushion(): {earthEmit: number, fireEmit: number, metalEmit: number, waterEmit: number, woodEmit: number} {
+    let elements = this.currentTerrain ? {earthEmit: this.currentTerrain.elementComposition.earth, fireEmit: this.currentTerrain.elementComposition.fire, metalEmit: this.currentTerrain.elementComposition.metal, waterEmit: this.currentTerrain.elementComposition.water, woodEmit: this.currentTerrain.elementComposition.wood} : {earthEmit: 0, fireEmit: 0, metalEmit: 0, waterEmit: 0, woodEmit: 0};
+    if(this.currentFlooring) {
+      switch (this.currentFlooring.element.name.toLowerCase()) {
+        case "earth":
+          elements.earthEmit += this.currentFlooring.elementEmit;
+          break;
+        case "fire":
+          elements.fireEmit += this.currentFlooring.elementEmit;
+          break;
+        case "metal":
+          elements.metalEmit += this.currentFlooring.elementEmit;
+          break;
+        case "water":
+          elements.waterEmit += this.currentFlooring.elementEmit;
+          break;
+        case "wood":
+          elements.woodEmit += this.currentFlooring.elementEmit;
+          break;
+        default:
+          break;
+      }
+    }
+    if(this.tiles) {
+      this.tiles.forEach(tile => {
+        const x = tile.coordinates.x;
+        const y = tile.coordinates.y;
+        const distance = this.getDistanceFromCushion(x, y);
+        if(tile.item.id) {
+          switch (tile.item.element.name.toLowerCase()) {
+            case 'earth':
+              elements.earthEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'fire':
+              elements.fireEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'metal':
+              elements.metalEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'water':
+              elements.waterEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+            case 'wood':
+              elements.woodEmit += this.getElementEmitOnCushion(distance, tile.item);
+              break;
+          }
+        }
+      })
+    }
+    return elements;
+  }
+
+  getElementEmitOnCushion(distance: number, item: GatherQiItem): number {
+    let elementEmit = 0;
+    if(distance <= item.elementEmit.range - 1) {
+      elementEmit = item.elementEmit.power * item.elementEmit.decay**(Math.max(0, distance - item.elementEmit.startDecay))
+    }
+    return elementEmit;
+  }
+
+  getElementsStrengthOnCushion(): {earthStrength: number, fireStrength: number, metalStrength: number, waterStrength: number, woodStrength: number} {
+    let elementsStrength = {earthStrength: 0, fireStrength: 0, metalStrength: 0, waterStrength: 0, woodStrength: 0};
+    let totalElements = this.elements.earthEmit + this.elements.fireEmit + this.elements.metalEmit + this.elements.waterEmit + this.elements.woodEmit;
+    if(totalElements > 0) {
+      let earthEmitRatio = this.elements.earthEmit / totalElements;
+      let fireEmitRatio = this.elements.fireEmit / totalElements;
+      let metalEmitRatio = this.elements.metalEmit / totalElements;
+      let waterEmitRatio = this.elements.waterEmit / totalElements;
+      let woodEmitRatio = this.elements.woodEmit / totalElements;
+      elementsStrength.earthStrength = 2 * (fireEmitRatio - woodEmitRatio) + earthEmitRatio;
+      elementsStrength.fireStrength = 2 * (woodEmitRatio - waterEmitRatio) + fireEmitRatio;
+      elementsStrength.metalStrength = 2 * (earthEmitRatio - fireEmitRatio) + metalEmitRatio;
+      elementsStrength.waterStrength = 2 * (metalEmitRatio - earthEmitRatio) + waterEmitRatio;
+      elementsStrength.woodStrength = 2 * (waterEmitRatio - metalEmitRatio) + woodEmitRatio;
+    }
+    return elementsStrength;
+  }
+
   getDistanceFromCushion(x: number, y: number): number {
     return Math.sqrt(x**2 + y**2);
   }
@@ -188,6 +337,8 @@ export class CultivationRoomComponent implements OnInit {
       const btnElement = (<HTMLElement>this.el.nativeElement).querySelector(`.tile-${tileId}`);
       this.renderer.setStyle(btnElement, 'background-image', `url("${this.gatherQiImgSrcUrl}/${this.currentItem.image}")`);
       this.totalGatherQiOnCushion = this.getTotalGatherQiOnCushion();
+      this.elements = this.getElementsOnCushion();
+      this.elementsStrength = this.getElementsStrengthOnCushion();
     }
   }
 

@@ -158,6 +158,79 @@
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="earthEmitButtonTooltip" datatype="html">
+        <source>Earth element strength</source>
+        <target>Force de l'élément Terre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fireEmitButtonTooltip" datatype="html">
+        <source>Fire element strength</source>
+        <target>Force de l'élément Feu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="matelEmitButtonTooltip" datatype="html">
+        <source>Metal element strength</source>
+        <target>Force de l'élément Métal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="waterEmitButtonTooltip" datatype="html">
+        <source>Water element strength</source>
+        <target>Force de l'élément Eau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="woodEmitButtonTooltip" datatype="html">
+        <source>Wood element strength</source>
+        <target>Force de l'élément Bois</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="terrainsSelectLabel" datatype="html">
+        <source>Terrains</source>
+        <target>Terrains</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="elementStrengthDescription" datatype="html">
+        <source>You need to have more than 1.85 element strength for the element that begets your element law. Element strength does not matter for None cultivators.</source>
+        <target>Vous devez avoir une force d'élément supérieure à 1,85 pour l'élément qui engendre votre loi d'élément. La force des éléments n’a pas d’importance pour les cultivateurs du Néant.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      </trans-unit>
+      <trans-unit id="flooringsSelectLabel" datatype="html">
+        <source>Flooring materials</source>
+        <target>Matériaux de revêtement de sol</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="flooringCtrlTooltip" datatype="html">
+        <source>Flooring range is only 1, so the only flooring that impacts the element factor is the cushion tile flooring. If you put a flooring on spirit soil, the Qi bonus will be canceled.</source>
+        <target>La distance d'effet des revêtements de sol n'est que de 1, donc le seul revêtement de sol qui a un impact sur le facteur élément est le revêtement de sol de la tuile du coussin. Si vous posez un revêtement de sol sur de la terre spirituelle, le bonus de Qi sera annulé.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/cultivation-room/components/cultivation-room/cultivation-room.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="goldenCoreDescription" datatype="html">
         <source>Enter factors to get an estimated total golden core breakthrough score.</source>
         <target>Entrer les facteurs pour obtenir une valeur approximative de votre score total de percée du Noyau doré</target>
@@ -323,8 +396,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="tileElementInputTooltip" datatype="html">
-        <source>Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).</source>
-        <target>Le bonus max est de 1.5 et est équivalent à +++++ en jeu (il dépend du sol, du revêtement de sol, des émetteurs d'éléments et de la météo).</target>
+        <source>Max bonus is 1.85+ and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).</source>
+        <target>Le bonus max est de 1.85+ et est équivalent à +++++ en jeu (il dépend du sol, du revêtement de sol, des émetteurs d'éléments et de la météo).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/golden-core/components/golden-core/golden-core.component.ts</context>
           <context context-type="linenumber">35</context>

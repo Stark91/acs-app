@@ -32,7 +32,7 @@ export class GoldenCoreComponent implements OnInit {
   seasonInputLabel = $localize`:@@season:Season`;
   seasonInputTooltip = $localize`:@@seasonInputTooltip:You can estimate season factor at ACS Fandom Wiki > Golden Core Breakthrough > Season.`;
   tileElementInputLabel = $localize`:@@tileElement:Tile element`;
-  tileElementInputTooltip = $localize`:@@tileElementInputTooltip:Max bonus is 1.5 and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).`;
+  tileElementInputTooltip = $localize`:@@tileElementInputTooltip:Max bonus is 1.85+ and is equivalent to +++++ in game (depends on ground, flooring, element emitters and weather).`;
   maxQiInputLabel = $localize`:@@maxQi:Max Qi`;
   maxQiInputTooltip = $localize`:@@maxQiInputTooltip:Your cultivator Max Qi. Max Qi determines the breakthrough duration.`;
   weatherContributeForText = $localize`:@@contributeFor:contribute for`;
@@ -43,6 +43,7 @@ export class GoldenCoreComponent implements OnInit {
   totalScoreButtonText = $localize`:@@totalScore:Total score`;
   tierButtonText = $localize`:@@tier:Tier`;
   
+  //form
   tileQiCtrl!: FormControl;
   lawMatchCtrl!: FormControl;
   luckCtrl!: FormControl;
@@ -53,11 +54,7 @@ export class GoldenCoreComponent implements OnInit {
   tileElementCtrl!: FormControl;
   maxQiCtrl!: FormControl;
 
-  weathers$!: Observable<Weather[]>;
-
-  goldenCoreImgSrcUrl = `${environment.imageUrl}/golden-core`;
-  elementImgSrcUrl = `${environment.imageUrl}/elements`;
-
+  //factors
   scorePerSecond = 0;
   totalScore = 0;
   tier = 9;
@@ -69,24 +66,14 @@ export class GoldenCoreComponent implements OnInit {
   yinYang = 1;
   weather: number[] = [];
   season = 0;
-  tileElement = 1.5;
+  tileElement = 0;
 
-  displayedColumns: string[] = ['tier', 'score'];
-  tiers: {
-    tier: number,
-    score: number
-  }[] = [
-    {tier: 0, score: 300000},
-    {tier: 1, score: 145000},
-    {tier: 2, score: 85000},
-    {tier: 3, score: 55000},
-    {tier: 4, score: 40000},
-    {tier: 5, score: 30000},
-    {tier: 6, score: 21000},
-    {tier: 7, score: 13000},
-    {tier: 8, score: 6000},
-    {tier: 9, score: 0}
-  ];
+  //observables
+  weathers$!: Observable<Weather[]>;
+
+  //image url
+  goldenCoreImgSrcUrl = `${environment.imageUrl}/golden-core`;
+  elementImgSrcUrl = `${environment.imageUrl}/elements`;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -107,11 +94,10 @@ export class GoldenCoreComponent implements OnInit {
     this.yinYangCtrl = this.formBuilder.control(1, [Validators.min(0)]);
     this.weatherCtrl = this.formBuilder.control('');
     this.seasonCtrl = this.formBuilder.control(1, [Validators.min(1), Validators.max(1.3)])
-    this.tileElementCtrl = this.formBuilder.control(1.5, [Validators.min(0.5), Validators.max(1.5)]);
+    this.tileElementCtrl = this.formBuilder.control(0);
     this.maxQiCtrl = this.formBuilder.control(0, [Validators.min(0)]);
 
     this.yinYangCtrl.disable(); //average is near 1, too many factors : day of the year, hour of the day, weather
-    this.tileElementCtrl.disable(); //only the max bonus, too many factors : ground, element emitters, flooring, weather 
   }
 
   initObservables() {
@@ -171,6 +157,15 @@ export class GoldenCoreComponent implements OnInit {
         this.tier = this.getTier();
       })
     ).subscribe();
+    this.tileElementCtrl.valueChanges.pipe(
+      startWith(this.tileElementCtrl.value),
+      map(value => {
+        this.tileElement = value;
+        this.scorePerSecond = this.getScorePerSecond();
+        this.getTotalScore();
+        this.tier = this.getTier();
+      })
+    ).subscribe();
     this.maxQiCtrl.valueChanges.pipe(
       startWith(this.maxQiCtrl.value),
       map(value => {
@@ -217,7 +212,7 @@ export class GoldenCoreComponent implements OnInit {
   }
 
   getScorePerSecond(): number {
-    return (30 + this.tileQi/50) * this.getLawMatchFactor() * this.getLuckFactor() * this.getMentalStateFactor() * this.yinYang * this.getWeatherFactor() * this.season * this.tileElement;
+    return (30 + this.tileQi/50) * this.getLawMatchFactor() * this.getLuckFactor() * this.getMentalStateFactor() * this.yinYang * this.getWeatherFactor() * this.season * this.getTileElementFactor();
   }
 
   getScorePerSecondAfterT1(): number {
@@ -277,6 +272,22 @@ export class GoldenCoreComponent implements OnInit {
       totalContribution += this.weather[i];
     };
     return Math.min(1 + 5 * totalContribution, 1.6);
+  }
+
+  getTileElementFactor(): number {
+    if(this.tileElement >= 1.85) {
+      return 1.5;
+    } else if(this.tileElement >= 1) {
+      return 1.25;
+    } else if(this.tileElement >= 0) {
+      return 1.1;
+    } else if(this.tileElement >= -1) {
+      return 0.9;
+    } else if(this.tileElement >= -1.9) {
+      return 0.75;
+    } else {
+      return 0.5;
+    }
   }
 
   getBreakthroughDuration(maxQi: number): number {
